@@ -1,0 +1,18 @@
+
+- Targeted data : The Korea Herald, National Section news
+- Period : 2015 - 2017
+- Crawled Date : 2018:-10-26
+- Data Header :  [ title, author, time, description, body, section ]
+- Data Size : 23769 news
+- Data Format : Json
+
+For python users, I highly recommend you to using this code for load the data
+
+
+import json
+import pandas
+
+with open( Data.Path, 'r') as f:
+	data=json.load(f)
+
+df = pandas.DataFrame.from_dict(data)
