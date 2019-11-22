@@ -2,8 +2,7 @@ import json
 import pandas as pd
 from nltk.corpus import stopwords
 from gensim.utils import lemmatize
-from gensim.corpora import Dictionary
-from gensim.models import LdaModel
+import pickle
 
 stopwords = stopwords.words("english")
 
@@ -29,30 +28,9 @@ def preprocess():
         res.append(lemmatize(raw_text, stopwords=stopwords))
     print("lemmatization done")
     df_data['lemmatized_body'] = res
-    #TODO: bigram - phrases?
-    dictionary = Dictionary(res)
-
-    df_data['body_vector'] = df_data['lemmatized_body'].apply(dictionary.doc2bow)
-
-    corpus = [vector for vector in df_data['body_vector']]
-
-
-
-
-    id2word = dictionary.id2token
-    model = LdaModel(
-        corpus=corpus,
-        id2word=id2word,
-        chunksize=2000,
-        alpha='auto',
-        eta='auto',
-        iterations=400,
-        num_topics=20,
-        passes=20,
-        eval_every=None
-    )
-    topics = model.show_topics(num_topics=20, num_words=15)
-    import pdb; pdb.set_trace()
+    # save the output
+    df_data.to_pickle("preprocess_result.pkl")
+    return df_data
 
 
 
