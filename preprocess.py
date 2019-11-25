@@ -1,7 +1,6 @@
 import json
 import pandas as pd
 from nltk.corpus import stopwords
-from gensim.utils import lemmatize
 import pickle
 from nltk.tokenize import word_tokenize
 
