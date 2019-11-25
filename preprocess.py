@@ -25,9 +25,9 @@ def preprocess():
     res = []
     for raw_text in df_data[' body']:
         #TODO: lemmatization - remove words with frequency less than certain threshold.
-        res.append(lemmatize(raw_text, stopwords=stopwords))
-    print("lemmatization done")
-    df_data['lemmatized_body'] = res
+        res.append(word_tokenize(raw_text))
+    print("tokenization done")
+    df_data['tokenized_body'] = res
     # save the output
     df_data.to_pickle("preprocess_result.pkl")
     return df_data
