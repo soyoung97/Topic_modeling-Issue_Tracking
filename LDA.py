@@ -36,9 +36,11 @@ def makeLDAmodel():
         eval_every=None
     )
     topics = model.show_topics(num_topics=20, num_words=15)
-    print("LDA done")
+    data = []
+    for t in topics:
+        data.append(str(t[0]) + "\n" + t[1])
     with open("LDA_last.log", 'w') as f:
-        f.write(topics)
+        f.write('\n\n'.join(data))
     f.close()
     return model
 makeLDAmodel()
