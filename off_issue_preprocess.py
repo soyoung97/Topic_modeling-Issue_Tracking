@@ -10,7 +10,7 @@ def extract_ner(ner_result):
     for entity in ner_result:
         if type(entity) == Tree:
             if len(entity) > 1:
-                res.append(entity)
+                res.append((entity.label(), " ".join(list(map(lambda x : x[0], entity.leaves())))))
     return res
 df = pd.read_pickle('preprocess_result.pkl')
 nered_result = []
