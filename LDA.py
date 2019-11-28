@@ -29,10 +29,9 @@ def make_LDA_model(alpha):
         dictionary.doc2bow)
     corpus = [vector for vector in df['body_vector']]
 
-    id2word = dictionary.id2token
     model = LdaModel(
         corpus=corpus,
-        id2word=id2word,
+        id2word=dictionary,
         chunksize=2000,
         alpha='auto',
         iterations=400,

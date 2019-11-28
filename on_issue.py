@@ -26,6 +26,7 @@ def main():
     df = get_articles('./data')
     topics = LDA.make_LDA_model(LDA.ALPHA).show_topics(num_topics=LDA.NUM_TOPICS,
                                                        num_words=LDA.NUM_WORDS)
+    print(topics)
 
 
 if __name__ == '__main__':
