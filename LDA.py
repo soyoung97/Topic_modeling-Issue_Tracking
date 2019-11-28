@@ -5,7 +5,7 @@ from gensim.models import LdaModel
 import itertools
 
 
-def makeLDAmodel():
+def make_LDA_model():
     df = pd.read_pickle('ner_result.pkl')
     # make df with ner count
     tokenized_with_ner_count = []
@@ -35,14 +35,20 @@ def makeLDAmodel():
         passes=20,
         eval_every=None
     )
+    return model
+
+
+def write_topics(model):
     topics = model.show_topics(num_topics=20, num_words=15)
     data = []
     for t in topics:
         data.append(str(t[0]) + "\n" + t[1])
+
     with open("LDA_last.log", 'w') as f:
         f.write('\n\n'.join(data))
     f.close()
-    return model
 
 
-makeLDAmodel()
+if __name__ == '__main__':
+    model = make_LDA_model()
+    write_topics(model)
