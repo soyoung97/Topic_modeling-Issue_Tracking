@@ -1,6 +1,7 @@
 import os
 import json
 import pandas
+import LDA
 
 
 from glob import glob
@@ -21,5 +22,11 @@ def get_articles(data_path):
     return total_df
 
 
-if __name__ == '__main__':
+def main():
     df = get_articles('./data')
+    topics = LDA.make_LDA_model(LDA.ALPHA).show_topics(num_topics=LDA.NUM_TOPICS,
+                                                       num_words=LDA.NUM_WORDS)
+
+
+if __name__ == '__main__':
+    main()

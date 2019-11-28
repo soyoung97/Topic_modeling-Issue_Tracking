@@ -5,7 +5,12 @@ from gensim.models import LdaModel
 import itertools
 
 
-def make_LDA_model():
+NUM_TOPICS = 20
+NUM_WORDS = 15
+ALPHA = 10
+
+
+def make_LDA_model(alpha):
     df = pd.read_pickle('ner_result.pkl')
     # make df with ner count
     tokenized_with_ner_count = []
@@ -14,9 +19,9 @@ def make_LDA_model():
             list(itertools.chain.from_iterable(ner_dict['multi_word']))
         for word in ner_list:
             tokens.remove(word)
-        tokens += ner_dict['single_word'] * 10
+        tokens += ner_dict['single_word'] * alpha
         multi_words = [' '.join(x) for x in ner_dict['multi_word']]
-        tokens += multi_words * 10
+        tokens += multi_words * alpha
         tokenized_with_ner_count.append(tokens)
     df['tokenized_with_ner_count'] = tokenized_with_ner_count
     dictionary = Dictionary(df['tokenized_with_ner_count'])
@@ -39,7 +44,7 @@ def make_LDA_model():
 
 
 def write_topics(model):
-    topics = model.show_topics(num_topics=20, num_words=15)
+    topics = model.show_topics(num_topics=NUM_TOPICS, num_words=NUM_WORDS)
     data = []
     for t in topics:
         data.append(str(t[0]) + "\n" + t[1])
@@ -50,5 +55,5 @@ def write_topics(model):
 
 
 if __name__ == '__main__':
-    model = make_LDA_model()
+    model = make_LDA_model(ALPHA)
     write_topics(model)
