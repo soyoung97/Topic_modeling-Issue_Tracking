@@ -1,6 +1,8 @@
 #!/bin/bash
-echo "[Info] Start installation"
+GREEN='\033[0;32m'
+NC='\033[0m'
+echo -e "${GREEN}[Info] Start installation${NC}"
 pip install -r requirements.txt
-echo "[Info] Install complete, now downlad nltk dataset"
-python -c "import nltk; nltk.download('stopwords')"
-echo "[Info] All done."
+echo -e "${GREEN}[Info] Install complete, now download nltk dataset${NC}"
+python -c "import nltk; nltk.download('stopwords'); nltk.download('averaged_perceptron_tagger'); nltk.download('maxent_ne_chunker'); nltk.download('words')"
+echo -e "${GREEN}[Info] All done.${NC}"
