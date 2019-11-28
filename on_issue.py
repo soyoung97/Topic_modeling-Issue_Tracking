@@ -1,11 +1,10 @@
 import os
 import json
 import pandas
-import LDA
-
 
 from glob import glob
-
+from gensim.models import LdaModel
+from gensim.corpora import Dictionary
 
 def get_articles(data_path):
     total_df = None
@@ -21,12 +20,13 @@ def get_articles(data_path):
 
     return total_df
 
+def get_LDA_model(path):
+    model = LdaModel.load(os.path.join(path, 'model.gensim'))
+    return model
 
 def main():
     df = get_articles('./data')
-    topics = LDA.make_LDA_model(LDA.ALPHA).show_topics(num_topics=LDA.NUM_TOPICS,
-                                                       num_words=LDA.NUM_WORDS)
-    print(topics)
+    model = get_LDA_model('./saves')
 
 
 if __name__ == '__main__':

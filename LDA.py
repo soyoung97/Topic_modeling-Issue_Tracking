@@ -1,9 +1,9 @@
 # require running preprocess.py
-import pandas as pd
-from gensim.corpora import Dictionary
-from gensim.models import LdaModel
 import itertools
+import pandas as pd
 
+from gensim.models import LdaModel
+from gensim.corpora import Dictionary
 
 NUM_TOPICS = 20
 NUM_WORDS = 15
@@ -35,7 +35,7 @@ def make_LDA_model(alpha):
         chunksize=2000,
         alpha='auto',
         iterations=400,
-        num_topics=20,
+        num_topics=NUM_TOPICS,
         passes=20,
         eval_every=None
     )
@@ -55,4 +55,7 @@ def write_topics(model):
 
 if __name__ == '__main__':
     model = make_LDA_model(ALPHA)
+
+    model.save('./saves/model.gensim')
+
     write_topics(model)
