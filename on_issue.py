@@ -27,6 +27,16 @@ def get_LDA_model(path):
 def main():
     df = get_articles('./data')
     model = get_LDA_model('./saves')
+    dictionary = model.id2word
+    other_texts = [
+        ['Mexico', 'Korean', 'European'],
+        ['US Air Force', 'New Zealand', 'French']]
+    other_corpus = [dictionary.doc2bow(text) for text in other_texts]
+
+    for unseen_doc in other_corpus:
+        vector = model[unseen_doc]
+        print(vector)
+
 
 
 if __name__ == '__main__':
