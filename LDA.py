@@ -57,5 +57,6 @@ if __name__ == '__main__':
     model = make_LDA_model(ALPHA)
 
     model.save('./saves/model.gensim')
+    print('LDA model has just saved as ./saves/model.gensim')
 
     write_topics(model)
