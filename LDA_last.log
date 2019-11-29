@@ -1,59 +1,59 @@
 0
-0.044*"Seoul" + 0.036*"the" + 0.035*"," + 0.024*"." + 0.020*"to" + 0.019*"of" + 0.017*"in" + 0.016*"Pohang" + 0.015*"and" + 0.012*"a" + 0.008*"for" + 0.008*"Korea" + 0.008*"Seoul Metropolitan" + 0.007*"South Korea" + 0.007*"The"
+0.186*"Japan" + 0.074*"Japanese" + 0.047*"Tokyo" + 0.033*"the" + 0.032*"Seoul" + 0.030*"Korean" + 0.021*"," + 0.020*"Abe" + 0.019*"to" + 0.017*"Korea" + 0.016*"of" + 0.016*"Shinzo Abe" + 0.012*"and" + 0.012*"a" + 0.011*"South"
 
 1
-0.089*"US" + 0.087*"North Korea" + 0.046*"North" + 0.030*"the" + 0.024*"," + 0.023*"Pyongyang" + 0.016*"Washington" + 0.016*"to" + 0.015*"South Korea" + 0.015*"." + 0.013*"a" + 0.013*"Seoul" + 0.012*"of" + 0.012*"Korean" + 0.012*"United States"
+0.062*"Western" + 0.061*"East Asia" + 0.058*"Denmark" + 0.052*"Cuba" + 0.043*"West" + 0.040*"Food" + 0.039*"Danish" + 0.036*"Soviet Union" + 0.031*"Yonsei University" + 0.028*"California" + 0.028*"Soviet" + 0.027*"Muslim" + 0.026*"Agriculture" + 0.025*"Pacific" + 0.020*"Rural Affairs"
 
 2
-0.251*"Trump" + 0.068*"Donald Trump" + 0.057*"US" + 0.049*"U.S." + 0.032*"White House" + 0.029*"Asia" + 0.020*"South Korea" + 0.012*"American" + 0.012*"National Assembly" + 0.012*"Yonhap" + 0.011*"Korea" + 0.011*"," + 0.010*"Seoul" + 0.009*"President" + 0.008*"to"
+0.120*"Lee" + 0.050*"Choi" + 0.040*"the" + 0.031*"Yonhap" + 0.027*"," + 0.021*"of" + 0.020*"." + 0.018*"to" + 0.016*"a" + 0.015*"in" + 0.010*"Constitutional Court" + 0.010*"and" + 0.009*"NIS" + 0.009*"for" + 0.008*"Supreme Court"
 
 3
-0.064*"Lee" + 0.048*"the" + 0.029*"," + 0.026*"Yonhap" + 0.021*"Liberty Korea Party" + 0.021*"Moon" + 0.020*"Democratic Party" + 0.019*"NIS" + 0.019*"to" + 0.019*"of" + 0.017*"." + 0.016*"National Assembly" + 0.015*"a" + 0.013*"Seoul" + 0.013*"Bareun Party"
+0.393*"Kim" + 0.059*"Hwang" + 0.023*"," + 0.020*"the" + 0.019*"Korean" + 0.014*"of" + 0.011*"his" + 0.009*"a" + 0.009*"in" + 0.008*"Yonhap" + 0.008*"." + 0.008*"leader" + 0.008*"Choe" + 0.008*"Yang" + 0.008*"Malaysia"
 
 4
-0.048*"Yonhap" + 0.047*"the" + 0.035*"," + 0.028*"of" + 0.026*"South Korea" + 0.025*"to" + 0.022*"Ministry" + 0.020*"and" + 0.019*"." + 0.016*"in" + 0.014*"a" + 0.014*"Seoul" + 0.013*"Moon" + 0.009*"for" + 0.007*"will"
+0.173*"Chung" + 0.133*"Yun" + 0.069*"English" + 0.061*"New York" + 0.057*"Turkey" + 0.029*"Turkish" + 0.026*"Iraq" + 0.026*"Colombia" + 0.024*"Switzerland" + 0.021*"Foreign Ministry" + 0.019*"United Nations" + 0.014*"Seoul" + 0.012*"Geneva" + 0.012*"National Assembly Speaker Chung" + 0.010*"NATO"
 
 5
-0.166*"North" + 0.100*"North Korea" + 0.046*"Pyongyang" + 0.040*"Yonhap" + 0.040*"the" + 0.035*"Korean" + 0.020*"," + 0.017*"to" + 0.015*"United Nations" + 0.013*"of" + 0.012*"'s" + 0.012*"UNSC" + 0.011*"UN" + 0.010*"and" + 0.010*"."
+0.059*"the" + 0.035*"," + 0.034*"Moon" + 0.026*"Saenuri Party" + 0.023*"to" + 0.019*"of" + 0.017*"." + 0.016*"National Assembly" + 0.016*"a" + 0.014*"Yonhap" + 0.012*"and" + 0.010*"Korea" + 0.010*"in" + 0.009*"’" + 0.009*"for"
 
 6
-0.053*"Yonhap" + 0.041*"the" + 0.032*"," + 0.023*"." + 0.020*"Busan" + 0.018*"in" + 0.018*"to" + 0.015*"Seoul" + 0.015*"a" + 0.015*"Incheon" + 0.014*"of" + 0.013*"and" + 0.012*"Gyeonggi Province" + 0.010*")" + 0.010*"("
+0.132*"South" + 0.095*"Korean" + 0.048*"the" + 0.027*"," + 0.025*"Seoul" + 0.021*"Yonhap" + 0.017*"of" + 0.015*"to" + 0.014*"a" + 0.013*"in" + 0.013*"." + 0.010*"and" + 0.009*"Army" + 0.009*"Korean War" + 0.008*"South Korean"
 
 7
-0.042*"," + 0.029*"the" + 0.021*"of" + 0.020*"Korea" + 0.020*"Shin" + 0.019*"and" + 0.018*"percent" + 0.016*"in" + 0.015*"Yonhap" + 0.013*"." + 0.012*"to" + 0.011*"American" + 0.010*"Seoul" + 0.010*"a" + 0.009*"NATO"
+0.139*"Seoul" + 0.052*"THAAD" + 0.041*"the" + 0.033*"South Korea" + 0.029*"Washington" + 0.021*"," + 0.021*"Han" + 0.020*"to" + 0.019*"Song" + 0.018*"Kang" + 0.015*"and" + 0.013*"of" + 0.011*"’" + 0.011*"a" + 0.011*"."
 
 8
-0.070*"US Air Force" + 0.067*"New Zealand" + 0.031*"French" + 0.029*"Gangwon" + 0.028*"Korea" + 0.027*"Han" + 0.017*"Pyeongchang" + 0.012*"North Gyeongsang" + 0.011*"Seoul International Aerospace" + 0.011*"Mirziyoyev" + 0.011*"Auckland" + 0.009*"North Jeolla" + 0.009*"jets" + 0.009*"Defense Exhibition" + 0.008*"Arctic"
+0.427*"China" + 0.155*"Chinese" + 0.086*"Beijing" + 0.012*"," + 0.011*"." + 0.010*"Hong Kong" + 0.010*"House" + 0.008*"to" + 0.007*"and" + 0.007*"in" + 0.007*"Communist Party" + 0.007*"Xi" + 0.007*"Taiwan" + 0.006*"Wang Yi" + 0.006*"Wang"
 
 9
-0.049*"English" + 0.040*"Iran" + 0.027*"," + 0.023*"Baek" + 0.016*"of" + 0.015*"the" + 0.014*"Education" + 0.014*"Seoul National University" + 0.011*"Afghanistan" + 0.011*"Technology" + 0.011*"Far East" + 0.011*"and" + 0.011*"University" + 0.009*"in" + 0.009*"Education Ministry"
+0.425*"Park" + 0.047*"Cheong Wa Dae" + 0.024*"Cho" + 0.024*"the" + 0.023*"to" + 0.017*"," + 0.015*"her" + 0.012*"Geun-hye" + 0.012*"President" + 0.011*"Seoul" + 0.011*"and" + 0.009*"Jeong" + 0.008*"of" + 0.008*"a" + 0.008*"Woo"
 
 10
-0.043*"Korea" + 0.040*"," + 0.029*"and" + 0.029*"ASEAN" + 0.028*"the" + 0.020*"Chuseok" + 0.020*"Korean" + 0.017*"of" + 0.016*"." + 0.015*"Indonesia" + 0.015*"in" + 0.013*"Seoul" + 0.013*"to" + 0.013*"Germany" + 0.011*"Joel"
+0.188*"Lim" + 0.130*"University" + 0.086*"Canada" + 0.079*"Jung" + 0.076*"Science" + 0.056*"Mexico" + 0.046*"Technology" + 0.042*"Canadian" + 0.035*"Sweden" + 0.006*"Alzheimer" + 0.006*"professor" + 0.005*"Nobel" + 0.004*"technology" + 0.004*"Oregon" + 0.004*"Canadian Embassy"
 
 11
-0.058*"Kim" + 0.045*"the" + 0.034*"Yonhap" + 0.026*"," + 0.022*"." + 0.021*"of" + 0.018*"to" + 0.017*"a" + 0.015*"Supreme Court" + 0.014*"in" + 0.013*"MBC" + 0.012*"and" + 0.010*"Constitutional Court" + 0.010*"for" + 0.007*"on"
+0.054*"Seoul" + 0.040*"Yonhap" + 0.037*"Hong" + 0.033*"the" + 0.029*"," + 0.025*"Gyeonggi Province" + 0.020*"Sung" + 0.020*"Busan" + 0.018*"Incheon" + 0.018*"in" + 0.017*"of" + 0.015*"Dokdo" + 0.014*"." + 0.011*"to" + 0.011*"Daegu"
 
 12
-0.098*"Kim" + 0.040*"," + 0.033*"the" + 0.026*"." + 0.022*"Korean" + 0.021*"of" + 0.018*"to" + 0.017*"’" + 0.017*"a" + 0.016*"and" + 0.014*"s" + 0.013*"“" + 0.013*"in" + 0.013*"”" + 0.011*"Korea"
+0.092*"Korea" + 0.050*"," + 0.045*"Korean" + 0.038*"and" + 0.023*"the" + 0.019*"Seoul" + 0.019*"in" + 0.018*"Joel Lee" + 0.016*"." + 0.015*"of" + 0.014*"Asia" + 0.012*"Australia" + 0.012*"Europe" + 0.011*"Korea Herald" + 0.011*"Singapore"
 
 13
-0.207*"Park" + 0.046*"Choi" + 0.029*"the" + 0.026*"," + 0.019*"." + 0.018*"to" + 0.015*"of" + 0.012*"and" + 0.012*"in" + 0.012*"a" + 0.011*"Seoul" + 0.009*"Samsung" + 0.008*"Yonhap" + 0.008*"’" + 0.007*"s"
+0.082*"US" + 0.038*"North Korea" + 0.028*"," + 0.025*"the" + 0.023*"Washington" + 0.023*"United States" + 0.022*"Trump" + 0.018*"." + 0.017*"to" + 0.015*"and" + 0.015*"Obama" + 0.013*"a" + 0.012*"``" + 0.011*"of" + 0.011*"Donald Trump"
 
 14
-0.128*"Moon" + 0.048*"South" + 0.042*"Cheong Wa Dae" + 0.035*"Korean" + 0.032*"the" + 0.025*"South Korea" + 0.025*"Yonhap" + 0.022*"," + 0.019*"to" + 0.019*"Russia" + 0.019*"Seoul" + 0.018*"North Korea" + 0.014*"and" + 0.011*"Russian" + 0.011*"Korean Peninsula"
+0.501*"U.S." + 0.061*"United States" + 0.051*"Washington" + 0.043*"American" + 0.020*"the" + 0.019*"," + 0.016*"Britain" + 0.016*"and" + 0.010*"British" + 0.010*"to" + 0.008*"Daejeon" + 0.008*"Asian" + 0.007*"London" + 0.007*"in" + 0.006*"that"
 
 15
-0.109*"South" + 0.103*"Korean" + 0.039*"North" + 0.036*"the" + 0.035*"South Korea" + 0.022*"Vietnam" + 0.019*"," + 0.014*"to" + 0.011*"of" + 0.011*"." + 0.010*"Korean War" + 0.010*"JSA" + 0.010*"Demilitarized Zone" + 0.009*"a" + 0.009*"UNC"
+0.051*"the" + 0.045*"," + 0.031*"." + 0.025*"to" + 0.022*"a" + 0.021*"of" + 0.018*"and" + 0.017*"’" + 0.017*"“" + 0.017*"”" + 0.016*"in" + 0.014*"Korean" + 0.013*"s" + 0.010*"Seoul" + 0.010*"that"
 
 16
-0.059*"South Korea" + 0.047*"the" + 0.040*"South" + 0.036*"Yonhap" + 0.026*"," + 0.025*"Seoul" + 0.022*"North" + 0.021*"North Korea" + 0.019*"Song" + 0.017*"Korean" + 0.016*"to" + 0.015*"of" + 0.014*"." + 0.013*"PyeongChang" + 0.012*"in"
+0.085*"Russia" + 0.048*"U.N." + 0.035*"Iran" + 0.028*"Germany" + 0.026*"Russian" + 0.024*"," + 0.022*"France" + 0.021*"and" + 0.020*"the" + 0.019*"Moscow" + 0.017*"Paris" + 0.016*"to" + 0.015*"Middle East" + 0.014*"French" + 0.012*"Seoul"
 
 17
-0.037*"Mexico" + 0.025*"," + 0.025*"Korean" + 0.022*"European" + 0.020*"Poland" + 0.018*"Europe" + 0.017*"the" + 0.013*"and" + 0.013*"." + 0.013*"Ukraine" + 0.012*"Kuwait" + 0.011*"America" + 0.011*"Peru" + 0.011*"in" + 0.010*"of"
+0.050*"the" + 0.046*"," + 0.032*"of" + 0.029*"to" + 0.022*"." + 0.020*"and" + 0.019*"in" + 0.013*"a" + 0.012*"for" + 0.011*"Korea" + 0.010*"Ministry" + 0.010*"percent" + 0.008*"Yonhap" + 0.008*"The" + 0.008*"from"
 
 18
-0.080*"China" + 0.052*"Japan" + 0.045*"South Korea" + 0.036*"Chinese" + 0.029*"the" + 0.024*"Seoul" + 0.023*"Kang" + 0.023*"Japanese" + 0.021*"," + 0.020*"Yonhap" + 0.019*"Beijing" + 0.019*"South" + 0.019*"Korean" + 0.019*"THAAD" + 0.017*"to"
+0.352*"South Korea" + 0.077*"Yonhap" + 0.029*"the" + 0.026*"'s" + 0.022*"to" + 0.020*"``" + 0.018*"in" + 0.017*"," + 0.017*"South Koreans" + 0.016*"''" + 0.012*"a" + 0.012*"said" + 0.012*"." + 0.012*"of" + 0.008*"will"
 
 19
-0.053*"Turkey" + 0.038*"Turkish" + 0.038*"Gangneung" + 0.031*"Thailand" + 0.028*"Yun" + 0.028*"Jeju" + 0.023*"KMA" + 0.016*"Hawaii" + 0.015*"Bali" + 0.013*"Syria" + 0.013*"Iraq" + 0.012*"Britain" + 0.012*"Somalia" + 0.011*"US Naval Forces Korea" + 0.010*"Okcal"
+0.177*"North" + 0.130*"North Korea" + 0.056*"Pyongyang" + 0.042*"the" + 0.023*"," + 0.022*"Korean" + 0.020*"Yonhap" + 0.019*"to" + 0.015*"of" + 0.014*"U.N." + 0.013*"a" + 0.012*"'s" + 0.011*"Korea" + 0.011*"." + 0.010*"and"
