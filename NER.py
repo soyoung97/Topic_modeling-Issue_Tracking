@@ -5,8 +5,8 @@ import pandas as pd
 from nltk.tree import Tree
 
 # NEED TO RUN PREPROCESS.PY before RUNNING NER.py!
-"""
-EXAMPLE_TEXT = "Michelle Obama takes one last walk through the White House with the family dogs as workers continue to ready her new DC home."
+'''
+EXAMPLE_TEXT = 'Michelle Obama takes one last walk through the White House with the family dogs as workers continue to ready her new DC home.'
 tokens = word_tokenize(EXAMPLE_TEXT)    # tokenizing
 # ['Michelle', 'Obama', 'takes', 'one', 'last', 'walk', 'through', 'the',
 # 'White', 'House', 'with', 'the', 'family', 'dogs', 'as', 'workers',
@@ -20,7 +20,7 @@ pos = pos_tag(tokens)                   # pos tagging
 #  ('home', 'NN'), ('.', '.')]
 namedEnt = ne_chunk(pos, binary=True)   # NER
 print(namedEnt)
-"""
+'''
 def extract_ner(ner_result):
     res = {'single_word': [], 'multi_word': []}
     # {'single word': ['Bank', ..], 'multi word': [['South', 'Korea'], ...[]]}
@@ -44,4 +44,3 @@ for preprocessed_text in df['tokenized_body']:
     nered_result.append(ner_set)
 df['ner'] = nered_result
 df.to_pickle('ner_result.pkl')
-import pdb;pdb.set_trace()
