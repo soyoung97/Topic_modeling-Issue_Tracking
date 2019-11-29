@@ -7,10 +7,10 @@ from gensim.corpora import Dictionary
 
 NUM_TOPICS = 20
 NUM_WORDS = 15
-ALPHA = 10
+NER_WEIGHT = 10
 
 
-def make_LDA_model(alpha):
+def make_LDA_model(ner_weight):
     df = pd.read_pickle('ner_result.pkl')
     # make df with ner count
     tokenized_with_ner_count = []
@@ -19,9 +19,9 @@ def make_LDA_model(alpha):
             list(itertools.chain.from_iterable(ner_dict['multi_word']))
         for word in ner_list:
             tokens.remove(word)
-        tokens += ner_dict['single_word'] * alpha
+        tokens += ner_dict['single_word'] * ner_weight
         multi_words = [' '.join(x) for x in ner_dict['multi_word']]
-        tokens += multi_words * alpha
+        tokens += multi_words * ner_weight
         tokenized_with_ner_count.append(tokens)
     df['tokenized_with_ner_count'] = tokenized_with_ner_count
     dictionary = Dictionary(df['tokenized_with_ner_count'])
@@ -54,7 +54,7 @@ def write_topics(model):
 
 
 if __name__ == '__main__':
-    model = make_LDA_model(ALPHA)
+    model = make_LDA_model(NER_WEIGHT)
 
     model.save('./saves/model.gensim')
     print('LDA model has just saved as ./saves/model.gensim')
