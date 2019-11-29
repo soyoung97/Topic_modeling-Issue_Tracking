@@ -46,9 +46,9 @@ def write_topics(model):
     topics = model.show_topics(num_topics=NUM_TOPICS, num_words=NUM_WORDS)
     data = []
     for t in topics:
-        data.append(str(t[0]) + "\n" + t[1])
+        data.append(str(t[0]) + '\n' + t[1])
 
-    with open("LDA_last.log", 'w') as f:
+    with open('LDA_last.log', 'w') as f:
         f.write('\n\n'.join(data))
     f.close()
 
