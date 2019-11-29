@@ -36,6 +36,8 @@ def main():
     for unseen_doc in other_corpus:
         vector = model[unseen_doc]
         print(vector)
+    df = pandas.read_pickle('ner_result.pkl')
+    print(df)
 
 
 
