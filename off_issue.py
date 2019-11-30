@@ -7,6 +7,7 @@ from glob import glob
 from gensim.models import LdaModel
 from gensim.corpora import Dictionary
 from sklearn.cluster import DBSCAN
+from scipy import sparse
 import numpy as np
 from Giveme5W1H.extractor.document import Document
 from Giveme5W1H.extractor.extractor import MasterExtractor
@@ -84,19 +85,27 @@ def get_answer_from_doc(rep_doc):
     return (top_who_answer, top_what_answer, top_when_answer, top_where_answer, top_why_answer, top_how_answer)
 
 
-def bow2vec(dictionary, text):
-    #print(max(dictionary.keys()))
-    return dictionary.doc2bow(text)
+def bow2vec(dictionary, texts, clen):
+    tlen = texts.shape[0]
+    sp = sparse.dok_matrix((tlen, clen + 1))
+    for i in range(tlen):
+        for wordIdx, wordCount in dictionary.doc2bow(texts.iloc[i]):
+            sp[i, wordIdx]  = wordCount
+    return sp
 
 def main():
     df = topic_numbering(True)
     topic0 = df[df.topic_num == 0]
     topic0['timestamp'] = topic0[' time'].map(convert_timestamp)
-    timedata = topic0['timestamp'].to_numpy().reshape(-1, 1)
+    tlen = topic0.shape[0]
+    timedata = topic0['timestamp'].to_numpy().reshape(tlen, 1)
     model = get_LDA_model('./saves')
     dictionary = model.id2word
-    tc = [bow2vec(dictionary, text) for text in topic0['tokenized_body']]
-    clustering = DBSCAN(eps=7200, min_samples=5).fit_predict(timedata)
+    clen = max(dictionary.keys())
+    tc = bow2vec(dictionary, topic0['tokenized_body'], clen)
+    for i in range(tlen):
+        tc[i, clen] = topic0['timestamp'].iloc[i]
+    clustering = DBSCAN(eps=7200, min_samples=5).fit_predict(tc)
     topic0['event'] = clustering
     for i in range(max(clustering)):
         rep_doc = topic0[topic0.event == i].iloc[0]
