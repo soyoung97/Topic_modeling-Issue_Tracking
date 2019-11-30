@@ -51,7 +51,7 @@ def write_topics(model):
     for t in topics:
         data.append(str(t[0]) + '\n' + t[1])
 
-    data = list(map(lambda x: x.encode('utf-8'), data))
+    data = list(map(lambda x: str(x.encode('utf-8')), data))
     with open('LDA_last.log', 'w') as f:
         f.write('\n\n'.join(data))
     f.close()
