@@ -59,49 +59,57 @@ def get_answer_from_doc(rep_doc):
     try:
         top_who_answer = doc.get_top_answer('who').get_parts_as_text()
     except:
-        top_who_answer = "unknown"
+        top_who_answer = 'unknown'
     try:
         top_what_answer = doc.get_top_answer('what').get_parts_as_text()
     except:
-        top_what_answer = "unknown"
+        top_what_answer = 'unknown'
     try:
         top_when_answer = doc.get_top_answer('when').get_parts_as_text()
     except:
-        top_when_answer = "unknown"
+        top_when_answer = 'unknown'
     try:
         top_where_answer = doc.get_top_answer('where').get_parts_as_text()
     except:
-        top_where_answer = "unknown"
+        top_where_answer = 'unknown'
     try:
         top_why_answer = doc.get_top_answer('why').get_parts_as_text()
     except:
-        top_why_answer = "unknown"
+        top_why_answer = 'unknown'
     try:
         top_how_answer = doc.get_top_answer('how').get_parts_as_text()
     except:
-        top_how_answer = "unknown"
+        top_how_answer = 'unknown'
 
     return (top_who_answer, top_what_answer, top_when_answer, top_where_answer, top_why_answer, top_how_answer)
+
+
+def bow2vec(dictionary, text):
+    #print(max(dictionary.keys()))
+    return dictionary.doc2bow(text)
 
 def main():
     df = topic_numbering(True)
     topic0 = df[df.topic_num == 0]
     topic0['timestamp'] = topic0[' time'].map(convert_timestamp)
     timedata = topic0['timestamp'].to_numpy().reshape(-1, 1)
+    model = get_LDA_model('./saves')
+    dictionary = model.id2word
+    tc = [bow2vec(dictionary, text) for text in topic0['tokenized_body']]
     clustering = DBSCAN(eps=7200, min_samples=5).fit_predict(timedata)
     topic0['event'] = clustering
     for i in range(max(clustering)):
         rep_doc = topic0[topic0.event == i].iloc[0]
         (top_who_answer, top_what_answer, top_when_answer, top_where_answer, top_why_answer, top_how_answer) = get_answer_from_doc(rep_doc)
-        print("====================")
-        print("event %d" % i)
-        print("who: %s" % top_who_answer)
-        print("what: %s" % top_what_answer)
-        print("when: %s" % top_when_answer)
-        print("where: %s" % top_where_answer)
-        print("why: %s" % top_why_answer)
-        print("how: %s" % top_how_answer)
-        print("--------------------")
+        print('====================')
+        print('event %d' % i)
+        print('who: %s' % top_who_answer)
+        print('what: %s' % top_what_answer)
+        print('when: %s' % top_when_answer)
+        print('where: %s' % top_where_answer)
+        print('why: %s' % top_why_answer)
+        print('how: %s' % top_how_answer)
+        print('--------------------')
 
 
 if __name__ == '__main__':
