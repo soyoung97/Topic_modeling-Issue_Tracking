@@ -85,12 +85,17 @@ def get_answer_from_doc(rep_doc):
     return (top_who_answer, top_what_answer, top_when_answer, top_where_answer, top_why_answer, top_how_answer)
 
 
+EPS = 50
+MSAMPLE = 5
+WVec = 1
+WTime = 0.0001
+
 def bow2vec(dictionary, texts, clen):
     tlen = texts.shape[0]
     sp = sparse.dok_matrix((tlen, clen + 1))
     for i in range(tlen):
         for wordIdx, wordCount in dictionary.doc2bow(texts.iloc[i]):
-            sp[i, wordIdx]  = wordCount
+            sp[i, wordIdx]  = wordCount * WVec
     return sp
 
 def do_clustering(model, topic0):
@@ -101,8 +106,8 @@ def do_clustering(model, topic0):
     clen = max(dictionary.keys())
     tc = bow2vec(dictionary, topic0['tokenized_body'], clen)
     for i in range(tlen):
-        tc[i, clen] = topic0['timestamp'].iloc[i]
-    clustering = DBSCAN(eps=7200, min_samples=5).fit_predict(tc)
+        tc[i, clen] = topic0['timestamp'].iloc[i] * WTime
+    clustering = DBSCAN(eps=EPS, min_samples=MSAMPLE).fit_predict(tc)
     return clustering
 
 def main():
@@ -111,7 +116,8 @@ def main():
     topic0 = df[df.topic_num == 0]
     clustering = do_clustering(model, topic0)
     topic0['event'] = clustering
-    for i in range(max(clustering)):
+    print("clusters: %d " % (max(clustering) + 1))
+    for i in range(max(clustering) + 1):
         rep_doc = topic0[topic0.event == i].iloc[0]
         (top_who_answer, top_what_answer, top_when_answer, top_where_answer, top_why_answer, top_how_answer) = get_answer_from_doc(rep_doc)
         print('====================')
