@@ -4,11 +4,12 @@ import pandas as pd
 
 from gensim.models import LdaModel
 from gensim.corpora import Dictionary
+from nltk.corpus import stopwords
 
 NUM_TOPICS = 20
 NUM_WORDS = 15
 NER_WEIGHT = 10
-
+stopwords = stopwords.words('english')
 
 def make_LDA_model(ner_weight):
     df = pd.read_pickle('ner_result.pkl')
@@ -22,6 +23,8 @@ def make_LDA_model(ner_weight):
         tokens += ner_dict['single_word'] * ner_weight
         multi_words = [' '.join(x) for x in ner_dict['multi_word']]
         tokens += multi_words * ner_weight
+        # filter out stopwords
+        tokens = list(filter(lambda x: x not in stopwords, tokens))
         tokenized_with_ner_count.append(tokens)
     df['tokenized_with_ner_count'] = tokenized_with_ner_count
     dictionary = Dictionary(df['tokenized_with_ner_count'])
