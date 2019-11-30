@@ -85,17 +85,19 @@ def get_answer_from_doc(rep_doc):
     return (top_who_answer, top_what_answer, top_when_answer, top_where_answer, top_why_answer, top_how_answer)
 
 
-EPS = 50
+EPS = 10
 MSAMPLE = 5
-WVec = 1
-WTime = 0.0001
+WVec = 150.0
+WTime = 0.000002
 
 def bow2vec(dictionary, texts, clen):
     tlen = texts.shape[0]
     sp = sparse.dok_matrix((tlen, clen + 1))
     for i in range(tlen):
-        for wordIdx, wordCount in dictionary.doc2bow(texts.iloc[i]):
-            sp[i, wordIdx]  = wordCount * WVec
+        bow = dictionary.doc2bow(texts.iloc[i])
+        wordSum = sum(map(lambda x: x[1], bow))
+        for wordIdx, wordCount in bow:
+            sp[i, wordIdx]  = wordCount * WVec / wordSum
     return sp
 
 def do_clustering(model, topic0):
@@ -119,6 +121,7 @@ def main():
     print("clusters: %d " % (max(clustering) + 1))
     for i in range(max(clustering) + 1):
         rep_doc = topic0[topic0.event == i].iloc[0]
+        print(topic0[topic0.event == i])
         (top_who_answer, top_what_answer, top_when_answer, top_where_answer, top_why_answer, top_how_answer) = get_answer_from_doc(rep_doc)
         print('====================')
         print('event %d' % i)
