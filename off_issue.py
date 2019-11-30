@@ -93,19 +93,23 @@ def bow2vec(dictionary, texts, clen):
             sp[i, wordIdx]  = wordCount
     return sp
 
-def main():
-    df = topic_numbering(True)
-    topic0 = df[df.topic_num == 0]
+def do_clustering(model, topic0):
     topic0['timestamp'] = topic0[' time'].map(convert_timestamp)
     tlen = topic0.shape[0]
     timedata = topic0['timestamp'].to_numpy().reshape(tlen, 1)
-    model = get_LDA_model('./saves')
     dictionary = model.id2word
     clen = max(dictionary.keys())
     tc = bow2vec(dictionary, topic0['tokenized_body'], clen)
     for i in range(tlen):
         tc[i, clen] = topic0['timestamp'].iloc[i]
     clustering = DBSCAN(eps=7200, min_samples=5).fit_predict(tc)
+    return clustering
+
+def main():
+    df = topic_numbering(True)
+    model = get_LDA_model('./saves')
+    topic0 = df[df.topic_num == 0]
+    clustering = do_clustering(model, topic0)
     topic0['event'] = clustering
     for i in range(max(clustering)):
         rep_doc = topic0[topic0.event == i].iloc[0]
