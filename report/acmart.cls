@@ -1204,13 +1204,12 @@
   \global\@ACM@journal@bibstripfalse
 }
 \if@ACM@journal\else
-\acmConference[Conference'17]{ACM Conference}{July 2017}{Washington,
-  DC, USA}%
+\acmConference[CS474 Term Project]{CS474 term project paper}{2019 Fall}{KAIST}%
 \fi
 \def\acmBooktitle#1{\gdef\@acmBooktitle{#1}}
-\acmBooktitle{Proceedings of \acmConference@name
-       \ifx\acmConference@name\acmConference@shortname\else
-         \ (\acmConference@shortname)\fi}
+\acmBooktitle{
+    CS474 Term project report
+}
 \def\@editorsAbbrev{(Ed.)}
 \def\@acmEditors{}
 \def\editor#1{\ifx\@acmEditors\@empty
@@ -2315,7 +2314,7 @@
        \ifx\@acmEditors\@empty\textit{.}\else
          \andify\@acmEditors\textit{, }\@acmEditors~\@editorsAbbrev.%
        \fi\
-       ACM, New York, NY, USA%
+       KAIST%
          \@article@string\unskip, \ref{TotPages}~\@pages@word.
     \fi
   \fi

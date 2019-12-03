@@ -5,4 +5,4 @@ report:
 	pdflatex report.tex
 
 clean:
-	rm -f report.pdf report.aux report.log report.out report.bbl report.blg
+	rm -f report.pdf *.aux report.log report.out report.bbl report.blg
