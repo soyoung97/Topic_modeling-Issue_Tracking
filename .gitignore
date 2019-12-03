@@ -5,3 +5,4 @@ venv/*
 *.gensim
 *.gensim.*
 *.pkl
+res.txt
