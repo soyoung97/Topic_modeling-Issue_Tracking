@@ -49,14 +49,14 @@ def classify_docs(df, model):
 def get_parts(doc, query):
     try:
         return doc.get_top_answer(query).get_parts_as_text()
-    except IndexError:
-        return None
+    except:
+        return 'unknown'
 
 
 def get_5w1h(row, extractor):
-    # doc = Document(row['title'], row[' description'],
-    #                row[' body'], row[' time'])
-    doc = Document.from_text(row[' body'], row[' time'])
+    doc = Document(row['title'], row[' description'],
+                   row[' body'], row[' time'])
+    # doc = Document.from_text(row[' body'], row[' time'])
     doc = extractor.parse(doc)
 
     return {
@@ -64,6 +64,7 @@ def get_5w1h(row, extractor):
         'where': get_parts(doc, 'where'),
         'what': get_parts(doc, 'what'),
         'who': get_parts(doc, 'who'),
+        'why': get_parts(doc, 'why'),
         'how': get_parts(doc, 'how')
     }
 
@@ -73,6 +74,7 @@ def get_issue_stats(rows, extractor):
     where_counter = Counter()
     what_counter = Counter()
     who_counter = Counter()
+    why_counter = Counter()
     how_counter = Counter()
 
     for row in tqdm(rows):
@@ -82,6 +84,7 @@ def get_issue_stats(rows, extractor):
         where_counter.update({res['where']: 1})
         what_counter.update({res['what']: 1})
         who_counter.update({res['who']: 1})
+        why_counter.update({res['why']: 1})
         how_counter.update({res['how']: 1})
 
     return {
@@ -89,6 +92,7 @@ def get_issue_stats(rows, extractor):
         'where': where_counter,
         'what': what_counter,
         'who': who_counter,
+        'why': why_counter,
         'how': how_counter
     }
 
