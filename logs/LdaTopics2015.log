@@ -1,0 +1,19 @@
+b'0\n0.105*"China" + 0.075*"North" + 0.069*"North Korea" + 0.043*"Chinese" + 0.037*"Pyongyang" + 0.034*"," + 0.018*"." + 0.018*"Beijing" + 0.011*"Korean" + 0.011*"South Korea" + 0.010*"Seoul" + 0.010*"Yonhap" + 0.010*"Kim" + 0.008*"Russia" + 0.008*"\xe2\x80\x99"'
+
+b'1\n0.207*"Park" + 0.031*"South Korea" + 0.029*"," + 0.021*"Cheong Wa Dae" + 0.020*"Hwang" + 0.017*"Yonhap" + 0.013*"." + 0.010*"Seoul" + 0.007*"President" + 0.007*"Sewol" + 0.006*"Yoo" + 0.006*"Saudi Arabia" + 0.006*"Geun-hye" + 0.006*"Paris" + 0.005*"Middle East"'
+
+b'2\n0.107*"North" + 0.086*"South" + 0.065*"Korean" + 0.056*"North Korea" + 0.036*"South Korea" + 0.031*"Seoul" + 0.027*"," + 0.026*"U.N." + 0.025*"Yonhap" + 0.019*"Pyongyang" + 0.014*"." + 0.011*"Korea" + 0.009*"South Koreans" + 0.009*"\'s" + 0.009*"Korean War"'
+
+b'3\n0.054*"MERS" + 0.051*"South Korea" + 0.039*"," + 0.026*"Yonhap" + 0.021*"Seoul" + 0.020*"." + 0.015*"South" + 0.012*"Navy" + 0.012*"Army" + 0.009*"Defense Ministry" + 0.008*"Health Ministry" + 0.008*"Middle East Respiratory Syndrome" + 0.008*"The" + 0.008*"said" + 0.007*"Middle East"'
+
+b'4\n0.092*"Japan" + 0.064*"South Korea" + 0.048*"Seoul" + 0.038*"Japanese" + 0.028*"," + 0.026*"Korean" + 0.023*"Tokyo" + 0.019*"China" + 0.018*"South" + 0.016*"Yonhap" + 0.014*"." + 0.013*"Korea" + 0.012*"Abe" + 0.010*"Yun" + 0.009*"Shinzo Abe"'
+
+b'5\n0.181*"Kim" + 0.032*"," + 0.022*"Korean" + 0.019*"Russia" + 0.015*"Seoul" + 0.014*"Turkey" + 0.012*"Russian" + 0.012*"." + 0.010*"Syria" + 0.010*"Korea" + 0.008*"Europe" + 0.008*"Paris" + 0.008*"Moscow" + 0.008*"Islamic State" + 0.007*"Germany"'
+
+b'6\n0.058*"Lee" + 0.047*"," + 0.031*"Yonhap" + 0.028*"." + 0.013*"Seoul" + 0.010*"The" + 0.010*"said" + 0.009*"South Korea" + 0.008*"Sung" + 0.007*"(" + 0.007*")" + 0.007*"Kang" + 0.007*"Choi" + 0.006*"Ministry" + 0.006*"NIS"'
+
+b'7\n0.060*"," + 0.044*"Korea" + 0.032*"." + 0.029*"Korean" + 0.014*"\xe2\x80\x9c" + 0.014*"\xe2\x80\x9d" + 0.013*"\xe2\x80\x99" + 0.013*"Seoul" + 0.008*"Korea Herald" + 0.008*"The" + 0.007*"said" + 0.005*"percent" + 0.005*")" + 0.004*"(" + 0.004*"OECD"'
+
+b'8\n0.063*"Saenuri Party" + 0.057*"NPAD" + 0.045*"Moon" + 0.035*"Kim" + 0.035*"National Assembly" + 0.034*"New Politics Alliance" + 0.031*"," + 0.028*"Democracy" + 0.020*"Chung" + 0.020*"." + 0.020*"\xe2\x80\x99" + 0.017*"Cho" + 0.016*"Ahn" + 0.014*"Saenuri" + 0.013*"party"'
+
+b'9\n0.296*"U.S." + 0.062*"Washington" + 0.057*"United States" + 0.046*"North Korea" + 0.023*"," + 0.023*"American" + 0.021*"Iran" + 0.016*"Obama" + 0.016*"Barack Obama" + 0.014*"``" + 0.013*"DPRK" + 0.013*"." + 0.012*"Yonhap" + 0.011*"\'\'" + 0.008*"said"'
