@@ -27,8 +27,7 @@ def preprocess(data_path):
 
     res = []
     for raw_text in df_data[' body']:
-        #TODO: lemmatization - remove words with frequency less than certain threshold.
-        res.append(word_tokenize(raw_text))
+        res.append(word_tokenize(raw_text)) # TODO: what if we do this on other library spacey?because it is said this does well
     print('tokenization done')
     df_data['tokenized_body'] = res
     # save the output
