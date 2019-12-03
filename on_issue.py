@@ -97,14 +97,22 @@ def main():
     df = get_articles('./data', load=True)
     model = get_LDA_model('./saves')
     clsfyd = classify_docs(df, model)
+    resf = open('res_on_issue.txt', 'w')
 
     extractor = MasterExtractor()
     for cat, item in enumerate(clsfyd):
         res = get_issue_stats(item, extractor)
 
         print('===Category %d===' % cat)
+        resf.write('===Category %d===\n' % cat)
         for key in res.keys():
             print(key, res[key].most_common(3))
+            resf.write(str(key))
+            resf.write(' ')
+            resf.write(str(res[key].most_common(3)))
+            resf.write('\n')
+        resf.flush()
+    resf.close()
 
     # dictionary = model.id2word
     # other_texts = [
