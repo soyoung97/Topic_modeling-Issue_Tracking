@@ -1,6 +1,7 @@
 import os
 import json
 import pandas
+import argparse
 
 from glob import glob
 from tqdm import tqdm
@@ -9,6 +10,9 @@ from gensim.models import LdaModel
 from gensim.corpora import Dictionary
 from Giveme5W1H.extractor.document import Document
 from Giveme5W1H.extractor.extractor import MasterExtractor
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--offset', type=int, default=0)
 
 
 def get_articles(data_path, load=False):
@@ -97,7 +101,7 @@ def get_issue_stats(rows, extractor):
     }
 
 
-def main():
+def main(offset):
     df = get_articles('./data', load=True)
     model = get_LDA_model('./saves')
     clsfyd = classify_docs(df, model)
@@ -105,6 +109,9 @@ def main():
 
     extractor = MasterExtractor()
     for cat, item in enumerate(clsfyd):
+        if cat < offset:
+            continue
+
         res = get_issue_stats(item, extractor)
 
         print('===Category %d===' % cat)
@@ -130,4 +137,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(parser.parse_args().offset)
