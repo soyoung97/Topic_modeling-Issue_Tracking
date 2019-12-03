@@ -6,3 +6,4 @@ venv/*
 *.gensim.*
 *.pkl
 res.txt
+res_on_issue.txt
