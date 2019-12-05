@@ -46,6 +46,37 @@ def make_LDA_model(ner_weight, year):
     )
     return model
 
+def LDA_with_neuroner(ner_weight, year):
+    df = pd.read_pickle('pickle/neuroner_result.pkl')
+    df = df[df[' time'] > str(year)]
+    df = df[df[' time'] < str(year+1)]
+    # make df with ner count
+    tokenized_with_ner_count = []
+    for ner_list, token_list in zip(df['neuroner_list'], df['neuroner_tokenized']):
+        # add ner with promoted frequency
+        total_list = token_list + ner_list * ner_weight
+        # filter out stopwords
+        tokens = list(filter(lambda x: x not in stopwords, total_list))
+        tokenized_with_ner_count.append(tokens)
+    df['tokenized_with_ner_count'] = tokenized_with_ner_count
+    dictionary = Dictionary(df['tokenized_with_ner_count'])
+    df['body_vector'] = df['tokenized_with_ner_count'].apply(
+        dictionary.doc2bow)
+    corpus = [vector for vector in df['body_vector']]
+
+    model = LdaModel(
+        corpus=corpus,
+        id2word=dictionary,
+        chunksize=2000,
+        alpha='auto',
+        iterations=400,
+        num_topics=NUM_TOPICS,
+        passes=20,
+        eval_every=None
+    )
+    return model
+
+
 
 def write_topics(model, year):
     topics = model.show_topics(num_topics=NUM_TOPICS, num_words=NUM_WORDS)
@@ -63,7 +94,7 @@ def write_topics(model, year):
 
 if __name__ == '__main__':
     for year in [2015, 2016, 2017]:
-        model = make_LDA_model(NER_WEIGHT, year)
-        model.save('./saves/ldamodel-' + str(year) + '.gensim')
-        print('LDA model has just saved as ./saves/ldamodel-' + str(year) + '.gensim')
+        model = LDA_with_neuroner(NER_WEIGHT, year)
+        model.save('./saves/neuronerldamodel-' + str(year) + '.gensim')
+        print('LDA model has just saved as ./saves/neuronerldamodel-' + str(year) + '.gensim')
         write_topics(model, year)
