@@ -3,6 +3,7 @@ from nltk.tokenize import word_tokenize
 from nltk import ne_chunk
 import pandas as pd
 from nltk.tree import Tree
+from neuroner import neuromodel
 
 # NEED TO RUN PREPROCESS.PY before RUNNING NER.py!
 '''
@@ -36,11 +37,39 @@ def extract_ner(ner_result):
             else:
                 res['single_word'].append(entity[0][0])
     return res
-df = pd.read_pickle('preprocess_result.pkl')
-nered_result = []
-for preprocessed_text in df['tokenized_body']:
-    ner_result = ne_chunk(pos_tag(preprocessed_text), binary=True)
-    ner_set = extract_ner(ner_result)
-    nered_result.append(ner_set)
-df['ner'] = nered_result
-df.to_pickle('ner_result.pkl')
+def ner_by_nltk():
+    df = pd.read_pickle('preprocess_result.pkl')
+    nered_result = []
+    for preprocessed_text in df['tokenized_body']:
+        ner_result = ne_chunk(pos_tag(preprocessed_text), binary=True)
+        ner_set = extract_ner(ner_result)
+        nered_result.append(ner_set)
+    df['ner'] = nered_result
+    df.to_pickle('ner_result.pkl')
+
+def extract_by_neuroner(file_path):
+    nn = neuromodel.NeuroNER(train_model=False, use_pretrained_model=True)
+    df = pd.read_pickle(file_path)
+    neuroner_infos = []
+    txt_without_ners = []
+    for preprocessed_text in df['tokenized_body']:
+        neuroner_result = [None] * len(ner_list)
+        ner_list = nn.predict(preprocessed_text)
+        txt = ''
+        oldend = 0
+        for i, ner_info in enumerate(ner_list):
+            start = ner_info['start']
+            txt += preprocessed_text[oldend:start]
+            oldend = ner_info['end']
+            neuroner_result[i] = ner_info['text']
+        txt += preprocessed_text[oldend:]
+        neuroner_infos.append(neuroner_result)
+        txt_without_ners.append(txt)
+        # make txt with NER text removed, and return list of ner tokens.
+    df['neuroner_list'] = neuroner_infos
+    df['neuroner_body'] = txt_without_ners
+    df.to_pickle('neuroner_result.pkl')
+
+if __name__ == '__main__':
+    file_path = 'preprocess_result.pkl'
+    extract_by_neuroner(file_path)
