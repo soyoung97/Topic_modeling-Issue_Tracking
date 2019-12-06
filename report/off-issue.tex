@@ -1,8 +1,80 @@
 \section{Off-issue tracking}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-sunt in culpa qui officia deserunt mollit anim id est laborum.
+For off-issue tracking, we first categorize topics given as Trend analysis part.
+In this section, we denote a document as sequence of tokens plus its created time $\mathbb{D} = (\Sigma^{+}, t)$, when $t \in \mathbb{R}$ (timestamp of creation time).
+and the set of document of topic $a$ as $\mathbb{T}_{a} \in \mathcal{P}(\mathbb{D})$.
 
+\subsection{BoW extractuion}
+In first, we have to extract document in some space which we can analyze quantatively.
+We use BoW as morphism from document space to vector space $\mathbb{R}^{N}$, which we can
+analyze similarity of document. In addition, we add one more dimension to give information
+of document creation time. From pre-calculated set of tokens $\Sigma = \{ \sigma_{1}, \sigma_{2}, \ldots, \sigma_{n} \}$,
+our transformation $b: \mathbb{D} \rightarrow \mathbb{R}^{n+1}$ is defined inductively as
+\[
+\begin{cases}
+    b([], t) = t * e_{n+1}\\
+    b(\sigma_{i} :: tl, t) = e_{i} + b(tl, t)
+\end{cases} 
+\]
+Then, morphism from $\mathbb{T}_{a} \in \mathcal{P}(\mathbb{D})$ to $\mathcal{P}(\mathbb{R}^{n+1})$ is naturally induced from $b$ as
+$\phi(\mathbb{T}_{a}) = \{b(d) | d \in \mathbb{T}_{a}\}$
+
+\subsection{Relation between semantic of document and BoW}
+We know that there are documents and events which have similar meaning, but we cannot formalize it because we currently do not have
+model of language interpretation in metric space. But we can assume \textit{such} space exists, i.e. there is an isomorphism
+$\phi: \mathbb{D} \rightarrow \mathbb{D}^{\#}$, when $(D^{\#}, d^{\#})$ is metric space. It is not hard to assume this structure,
+since similar concept is already introduced as Entity comparison/Behavior comparison operator of Semantic algebra \cite{wang2013semantic}.
+
+Our desired result is that $b$ with euclidean distance successfuly models $(D^{\#}, d^{\#})$, but we cannot show it because we do not have
+constructive definition of $D^{\#}$. But if it has sufficient approximation, (bounded approximation)
+We can derive more interesting properties (such as bounded error from BoW to Event space, etc).
+
+\begin{definition}
+    $b$ has approximation of $\phi$ with bound $K, \epsilon$ iff there exists an Lipshitz continuous $\pi$ with $K$ that $d^{\#}(\pi(b(d)), \phi(d)) < \epsilon$.
+\end{definition}
+
+\subsection{Relation between semantic of event and BoW}
+Once semantic of document is defined, we can build similar notion of event as metric space. To build such space, we first understand about
+relation between document and event.
+\begin{itemize}
+    \item similar document refer similar event.
+    \item similar event (even same event) may be refered by documents with far distance, but it is not arbitrarly far.
+\end{itemize}
+we can formulize this as logical formlua, with definition of $e: D^{\#} \rightarrow E^{\#}$. ($(E^{\#}, e^{\#})$ is metric space for event)
+\begin{itemize}
+    \item if $d^{\#}(d_{1}, d_{2})$ is sufficiently small, then $e^{\#}(e(d_{1}), e(d_{2}))$ is sufficiently small.
+    \item when $e^{\#}(e(d_{1}), e(d_{2}))$ is small, it doesn't mean $d^{\#}(d_{1}, d_{2})$ is small but is bounded.
+\end{itemize}
+begin with this fact, we can find very interesting property which generalize this: continuity.
+\begin{definition}
+    $e$ is Lipschitz continuous with $K$ when $e^{\#}(e(d_{1}), e(d_{2})) \leq K d^{\#}(d_{1}, d_{2})$.
+\end{definition}
+
+We can check that if $e$ is Lipschitz continuous with $K_{e}$, then above two property is satisfied. Also, it derives important fact:
+If we have approximation of semantics with bounded error, then there also exists approximation of event with bounded error.
+\begin{theorem}
+    $b$ has approximation of $\phi$ with bound $K, \epsilon$, then there exists $\pi_{e}: \mathbb{R}^{n+1} \rightarrow E^{\#}$ s.t.
+    $e^{\#}(\pi_{e}(b(d)), e(\phi(d))) < K_{e} \cdot \epsilon$. (it means $b$ has approximation of $e \cdot \phi$ with bound $K, K_{e} \cdot \epsilon$)
+\end{theorem}
+Although proof is directly derived from Lipschitz continuity, it emphasizes that if we have bounded approximate of document, then it guarantees
+bounded approximation of event.
+
+\subsection{Event clustering}
+
+In this assumption about semantic of document ans event, we can build event clustering method. Before using techniques in $R^{n+1}$, we
+focus on how this clustering in $R^{n+1}$ effects in $E^{\#}$.
+
+\begin{theorem}
+    if $b$ has approximation of $e \cdot \phi$ with bound $K, \epsilon$, then $e^{\#}(e \cdot \phi(d_{1}), e \cdot \phi(d_{2})) \leq 2 \cdot \epsilon + K || b(d_{1}) - b(d_{2}) || $.
+\end{theorem}
+
+\begin{proof}
+    \begin{align*}
+     & e^{\#}(e \cdot \phi(d_{1}), e \cdot \phi(d_{2})) \leq e^{\#}(e \cdot \phi(d_{1}), \pi_{e}(b(d_{1}))) + \\
+     & e^{\#}(\pi_{e}(b(d_{1})), \pi_{e}(b(d_{2}))) + e^{\#}(\pi_{e}(b(d_{2})), e \cdot \phi(d_{2})) \leq \\
+     & \epsilon + e^{\#}(\pi_{e}(b(d_{1})), \pi_{e}(b(d_{2}))) + \epsilon \leq \\
+     & 2 \cdot \epsilon + K || b(d_{1}) - b(d_{2}) ||.
+    \end{align*}
+\end{proof}
+
+It shows that, if we make good Vector transformation $b$, then it automatically guarantees bounded error for distance of extracted event, without
+construction of $\pi$, $\phi$, $e$ or any other.
