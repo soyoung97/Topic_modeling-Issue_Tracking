@@ -1,18 +1,18 @@
 \section{Off-issue tracking}
 For off-issue tracking, we first categorize topics given as Trend analysis part.
-In this section, we denote a document as sequence of tokens plus its created time $\mathbb{D} = (\Sigma^{+}, t)$, when $t \in \mathbb{R}$ (timestamp of creation time).
+In this section, we denote a document as sequence of tokens plus its created time $\mathbb{D} := (\Sigma^{+}, t)$, when $t \in \mathbb{R}$ (timestamp of creation time).
 and the set of document of topic $a$ as $\mathbb{T}_{a} \in \mathcal{P}(\mathbb{D})$.
 
 \subsection{BoW extractuion}
 In first, we have to extract document in some space which we can analyze quantatively.
 We use BoW as morphism from document space to vector space $\mathbb{R}^{N}$, which we can
 analyze similarity of document. In addition, we add one more dimension to give information
-of document creation time. From pre-calculated set of tokens $\Sigma = \{ \sigma_{1}, \sigma_{2}, \ldots, \sigma_{n} \}$,
+of document creation time. From pre-calculated set of tokens $\Sigma := \{ \sigma_{1}, \sigma_{2}, \ldots, \sigma_{n} \}$,
 our transformation $b: \mathbb{D} \rightarrow \mathbb{R}^{n+1}$ is defined inductively as
 \[
 \begin{cases}
-    b([], t) = t * e_{n+1}\\
-    b(\sigma_{i} :: tl, t) = e_{i} + b(tl, t)
+    b([], t) := t * e_{n+1}\\
+    b(\sigma_{i} :: tl, t) := e_{i} + b(tl, t)
 \end{cases} 
 \]
 Then, morphism from $\mathbb{T}_{a} \in \mathcal{P}(\mathbb{D})$ to $\mathcal{P}(\mathbb{R}^{n+1})$ is naturally induced from $b$ as
@@ -29,7 +29,7 @@ constructive definition of $D^{\#}$. But if it has sufficient approximation, (bo
 We can derive more interesting properties (such as bounded error from BoW to Event space, etc).
 
 \begin{definition}
-    $b$ has approximation of $\phi$ with bound $K, \epsilon$ iff there exists an Lipshitz continuous $\pi$ with $K$ that $d^{\#}(\pi(b(d)), \phi(d)) < \epsilon$.
+    $b$ has approximation of $\phi$ with bound $K, \epsilon$ iff there exists an Lipshitz continuous $\pi$ with $K$ that $d^{\#}(\pi(b(d)), \phi(d)) \leq \epsilon$.
 \end{definition}
 
 \subsection{Relation between semantic of event and BoW}
@@ -46,14 +46,14 @@ we can formulize this as logical formlua, with definition of $e: D^{\#} \rightar
 \end{itemize}
 begin with this fact, we can find very interesting property which generalize this: continuity.
 \begin{definition}
-    $e$ is Lipschitz continuous with $K$ when $e^{\#}(e(d_{1}), e(d_{2})) \leq K d^{\#}(d_{1}, d_{2})$.
+    $e$ is Lipschitz continuous with $K$ if and only if\\ $e^{\#}(e(d_{1}), e(d_{2})) \leq K d^{\#}(d_{1}, d_{2})$.
 \end{definition}
 
 We can check that if $e$ is Lipschitz continuous with $K_{e}$, then above two property is satisfied. Also, it derives important fact:
 If we have approximation of semantics with bounded error, then there also exists approximation of event with bounded error.
 \begin{theorem}
     $b$ has approximation of $\phi$ with bound $K, \epsilon$, then there exists $\pi_{e}: \mathbb{R}^{n+1} \rightarrow E^{\#}$ s.t.
-    $e^{\#}(\pi_{e}(b(d)), e(\phi(d))) < K_{e} \cdot \epsilon$. (it means $b$ has approximation of $e \cdot \phi$ with bound $K, K_{e} \cdot \epsilon$)
+    $e^{\#}(\pi_{e}(b(d)), e(\phi(d))) \leq K_{e} \cdot \epsilon$. (it means $b$ has approximation of $e \cdot \phi$ with bound $K, K_{e} \cdot \epsilon$)
 \end{theorem}
 Although proof is directly derived from Lipschitz continuity, it emphasizes that if we have bounded approximate of document, then it guarantees
 bounded approximation of event.
@@ -77,4 +77,30 @@ focus on how this clustering in $R^{n+1}$ effects in $E^{\#}$.
 \end{proof}
 
 It shows that, if we make good Vector transformation $b$, then it automatically guarantees bounded error for distance of extracted event, without
-construction of $\pi$, $\phi$, $e$ or any other.
+construction of $\pi$, $\phi$, $e$ or any other. Begin with this fact, we derive constructive definition of partition for documents using approximated
+transformation $b$. To do that, we first define similarity for two documents.
+
+\begin{definition}[Similarity relation]
+    $\approx_{\mathbb{R}^{n+1}, \delta} \in \mathcal{P}(\mathbb{D \times D})$ is defined as \begin{displaymath}
+        d_{1} \approx_{\mathbb{R}^{n+1}, \delta} d_{2} \Longleftrightarrow || b(d_{1}) - b(d_{2}) || \leq \delta.
+    \end{displaymath}
+    Similarly, $\approx_{E^{\#}, \delta} \in \mathcal{P}(\mathbb{D \times D})$ is defined as \begin{displaymath}
+    d_{1} \approx_{E^{\#}, \delta} d_{2} \Longleftrightarrow e^{\#}(e \cdot \phi(d_{1}), e \cdot \phi(d_{2})) \leq \delta.
+    \end{displaymath}
+\end{definition}
+then $\approx_{\mathbb{R}^{n+1}, \delta} \subseteq \approx_{E^{\#}, 2 \cdot \epsilon + K \cdot \delta}$ holds by above theorem. Thus it is quite
+reasonable to use $\approx_{\mathbb{R}^{n+1}, \delta}$ to cluster events.
+
+\begin{definition}[Transitive closure]
+    $\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ is smallest relation on $\mathbb{D}$ that contains $\approx_{\mathbb{R}^{n+1}, \delta}$ and is transitive.
+\end{definition}
+
+Then $\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ is reflexive, symmetric and transitive, which can be equivalence relation. Then, we can partition
+documents with this equivalence relation.
+
+\begin{definition}[Partiton of $\mathbb{D}$]
+    when $\approx$ is equivalence relation, $\mathbb{D}/\approx := \{[a] | a \in \mathbb{D}\}$, when $[a] := \{b \in \mathbb{D} | a \approx b \}$.
+\end{definition}
+
+By substitute $\mathbb{D}$ to $\mathbb{T}_{a}$, finally we have $\mathbb{T}_{a}/\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ as successful approximation 
+of event partition of topic $a$. Now, we are going to explain how most relevent description of event is extracted from each partiton.
