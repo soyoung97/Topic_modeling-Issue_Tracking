@@ -55,7 +55,7 @@ If we have approximation of semantics with bounded error, then there also exists
     $b$ has approximation of $\phi$ with bound $K, \epsilon$, then there exists $\pi_{e}: \mathbb{R}^{n+1} \rightarrow E^{\#}$ s.t.
     $e^{\#}(\pi_{e}(b(d)), e(\phi(d))) \leq K_{e} \cdot \epsilon$. (it means $b$ has approximation of $e \cdot \phi$ with bound $K, K_{e} \cdot \epsilon$)
 \end{theorem}
-Although proof is directly derived from Lipschitz continuity, it emphasizes that if we have bounded approximate of document, then it guarantees
+Although proof is directly derived from Lipschitz continuity, it emphasizes that if we have bounded approximation of document, then it guarantees
 bounded approximation of event.
 
 \subsection{Event clustering}
@@ -78,7 +78,7 @@ focus on how this clustering in $R^{n+1}$ effects in $E^{\#}$.
 
 It shows that, if we make good Vector transformation $b$, then it automatically guarantees bounded error for distance of extracted event, without
 construction of $\pi$, $\phi$, $e$ or any other. Begin with this fact, we derive constructive definition of partition for documents using approximated
-transformation $b$. To do that, we first define similarity for two documents.
+transformation $b$. To do that, we first define similarity relation for two documents.
 
 \begin{definition}[Similarity relation]
     $\approx_{\mathbb{R}^{n+1}, \delta} \in \mathcal{P}(\mathbb{D \times D})$ is defined as \begin{displaymath}
@@ -89,7 +89,7 @@ transformation $b$. To do that, we first define similarity for two documents.
     \end{displaymath}
 \end{definition}
 then $\approx_{\mathbb{R}^{n+1}, \delta} \subseteq \approx_{E^{\#}, 2 \cdot \epsilon + K \cdot \delta}$ holds by above theorem. Thus it is quite
-reasonable to use $\approx_{\mathbb{R}^{n+1}, \delta}$ to cluster events.
+reasonable to use $\approx_{\mathbb{R}^{n+1}, \delta}$ to cluster events, instead of uncomputable relation $\approx_{E^{\#}, 2 \cdot \epsilon + K \cdot \delta}$.
 
 \begin{definition}[Transitive closure]
     $\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ is smallest relation on $\mathbb{D}$ that contains $\approx_{\mathbb{R}^{n+1}, \delta}$ and is transitive.
