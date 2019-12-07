@@ -1,8 +1,8 @@
 report:
-	pdflatex report.tex
+	pdflatex -shell-escape report.tex
 	bibtex report
-	pdflatex report.tex
-	pdflatex report.tex
+	pdflatex -shell-escape report.tex
+	pdflatex -shell-escape report.tex
 
 clean:
 	rm -f report.pdf *.aux report.log report.out report.bbl report.blg
