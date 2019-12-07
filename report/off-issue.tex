@@ -95,8 +95,8 @@ reasonable to use $\approx_{\mathbb{R}^{n+1}, \delta}$ to cluster events, instea
     $\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ is smallest relation on $\mathbb{D}$ that contains $\approx_{\mathbb{R}^{n+1}, \delta}$ and is transitive.
 \end{definition}
 
-Then $\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ is reflexive, symmetric and transitive, which can be equivalence relation. Then, we can partition
-documents with this equivalence relation.
+Then $\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ is reflexive, symmetric and transitive, which can be considered as equivalence relation.
+Then, we can partition documents with this equivalence relation.
 
 \begin{definition}[Partiton of $\mathbb{D}$]
     when $\approx$ is equivalence relation, $\mathbb{D}/\approx := \{[a] | a \in \mathbb{D}\}$, when $[a] := \{b \in \mathbb{D} | a \approx b \}$.
@@ -104,3 +104,35 @@ documents with this equivalence relation.
 
 By substitute $\mathbb{D}$ to $\mathbb{T}_{a}$, finally we have $\mathbb{T}_{a}/\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ as successful approximation 
 of event partition of topic $a$. Now, we are going to explain how most relevent description of event is extracted from each partiton.
+
+\subsection{Extracting representative description}
+
+Now we have cluster of events (documents which describing events) $\mathbb{T}_{a}/\approx_{\mathbb{R}^{n+1}, \delta}^{*}$, but we should
+return summary of events, because whole collection of documents are quite long to read and might have
+unnecessary information. So we have to extract \textit{representative description} of tht event cluster.
+To extract target information from a document is well studied in information extraction field,
+and there are several method such as template-based information extraction, neural methods, etc.
+But in the case of several docuemnts, it is hard to converge summary to cover all document's information,
+because existing works is not based on language semantic-based, so it is hard to generate summary statement
+bewtween description of similar/same meaning. 
+
+For example, if one document describe the event happens "one day after of 12/7", and there are another
+document describe the event was happend "one day before of 12/9". Obviously both description
+refer same day, but token-based approach (or pattern-based approach such as signal words) cannot
+handle this issue. Even with this disadvantage, above method is widely used because of
+its high performance (and due to challenges of semantic based information extraction method).
+
+So, we decided to use event extractor for one document, but we design to choose
+representative document appropriately.
+
+\begin{definition}[Representative docuemnt]
+    document $d \in [a]$ is \textit{representative document} of $[a]$ when
+    $\sum_{d^{'} \in [a]} ||b(d) - b(d^{'})|| \\ \leq \sum_{d^{'} \in [a]} ||b(x) - b(d^{'})||$ 
+    for any $x \in [a]$.
+\end{definition}
+
+It means that we choose to extract event from a document which has
+minimum difference between all other documents. After choosing representative
+document, we use 5W1H framework to extract description of event.
+
+\subsection{implementation}
