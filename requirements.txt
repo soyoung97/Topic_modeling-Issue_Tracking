@@ -21,3 +21,4 @@ six==1.13.0
 sklearn==0.0
 smart-open==1.9.0
 urllib3==1.25.7
+giveme5w1h==1.0.17
