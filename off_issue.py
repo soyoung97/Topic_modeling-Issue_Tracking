@@ -39,7 +39,7 @@ def topic_numbering(load = False):
     df = get_articles('./data', load=True)
     model = get_LDA_model('./saves')
     dictionary = model.id2word
-    print(df['tokenized_body'])
+    #print(df['tokenized_body'])
     tc = [dictionary.doc2bow(text) for text in df['tokenized_body']]
     topic_assign = []
     for ins in tc:
@@ -138,10 +138,10 @@ def main():
     topic0 = df[df.topic_num == 0]
     clustering = do_clustering(model, topic0)
     topic0['event'] = clustering
-    print("clusters: %d " % (max(clustering) + 1))
+    #print("clusters: %d " % (max(clustering) + 1))
     for i in range(max(clustering) + 1):
         rep_doc = get_rep_doc(model, topic0[topic0.event == i])
-        print(topic0[topic0.event == i])
+        #print(topic0[topic0.event == i])
         (top_who_answer, top_what_answer, top_when_answer, top_where_answer, top_why_answer, top_how_answer) = get_answer_from_doc(rep_doc)
         print('====================')
         print('event %d' % i)
