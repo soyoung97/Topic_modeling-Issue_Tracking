@@ -133,11 +133,11 @@ representative document appropriately.
 
 It means that we choose to extract event from a document which has
 minimum difference between all other documents. After choosing representative
-document, we use 5W1H framework to extract description of event.
+document, we use Giveme5W1H framework\cite{Hamborg2019b} to extract description of event.
 
 \subsection{implementation}
 
 To implement BoW transformation and document clustering, we use pandas and gensim for python.
 to calculate transitive closure and finding partition, we use DBSCAN algorithm. Parameters
 are adjusted by experiments on small set of documents. After that, extracting event
-description is done by 5W1H framework.
+description is done by Giveme5W1H framework.
