@@ -33,14 +33,20 @@ def get_articles(data_path, load=False):
     return total_df
 
 
-def get_LDA_model(path):
-    model = LdaModel.load(os.path.join(path, 'model.gensim'))
+def get_LDA_model(path, year):
+    model = LdaModel.load(os.path.join(
+        path, 'removedneuronerldamodel-%d.gensim' % year))
     return model
 
 
-def split_by_quarter(df):
+def split_by_year(df):
     df['timestamp'] = pandas.to_datetime(df[' time'])
     df = df.sort_values(by=['timestamp'])
+    year = df['timestamp'].dt.to_period('Y')
+    return df.groupby(year)
+
+
+def split_by_quarter(df):
     year = df['timestamp'].dt.to_period('Q')
     return df.groupby(year)
 
@@ -51,16 +57,12 @@ def classify_docs(df, model):
               for _ in quarter_docs]
 
     dictionary = model.id2word
-    for q_idx, quarter_tuple in tqdm(enumerate(quarter_docs), total=len(quarter_docs)):
-        quarter = quarter_tuple[1]
-        bodies = [dictionary.doc2bow(tok_body)
-                  for tok_body in quarter['tokenized_body']]
-
-        for d_idx, body in enumerate(bodies):
+    for q_idx, (_, quarter) in tqdm(enumerate(quarter_docs), total=len(quarter_docs)):
+        for d_idx, row in quarter.iterrows():
+            body = dictionary.doc2bow(row['tokenized_body'])
             vector = model[body]
             cat = max(vector, key=lambda x: x[1])[0]
-            clsfyd[q_idx][cat] = clsfyd[q_idx][cat].append(df.loc[d_idx])
-
+            clsfyd[q_idx][cat] = clsfyd[q_idx][cat].append(row)
     return clsfyd
 
 
@@ -123,25 +125,29 @@ def get_issue_stats(rows, extractor):
 
 def __main(offset):
     df = get_articles('./data', load=True)
-    model = get_LDA_model('./saves')
-    clsfyd = classify_docs(df, model)
-    resf = open('res_on_issue.txt', 'a')
+    clsfyd = list()
+    for i, yeardf in split_by_year(df):
+        if int(i.year) == 2018:
+            continue
+        model = get_LDA_model('./saves', int(i.year))
+        clsfyd += classify_docs(yeardf, model)
+    print(len(clsfyd))
+    resf = open('res_on_issue.txt', 'w')
 
     extractor = MasterExtractor()
     for idx, quarter in enumerate(clsfyd):
-        print('\n===Quarter %d===' % idx)
+        print('\n===Quarter %d===\n' % idx)
         resf.write('===Quarter %d===\n' % idx)
         for cat, docs in enumerate(quarter):
-            if cat < offset:
-                continue
-
             res = get_issue_stats(docs, extractor)
 
-            print('\n===Category %d===' % cat)
+            print('\n===Category %d===\n' % cat)
             resf.write('===Category %d===\n' % cat)
             for key in res:
                 print(key, res[key].most_common(3))
                 resf.write('%s: %s\n' % (key, str(res[key].most_common(3))))
+            print('\n')
+            resf.flush()
     resf.close()
 
 
