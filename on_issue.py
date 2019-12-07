@@ -1,6 +1,7 @@
 import os
 import json
 import pandas
+import datetime
 import argparse
 
 from glob import glob
@@ -32,21 +33,36 @@ def get_articles(data_path, load=False):
     return total_df
 
 
-def get_LDA_model(path):
-    model = LdaModel.load(os.path.join(path, 'model.gensim'))
+def get_LDA_model(path, year):
+    model = LdaModel.load(os.path.join(
+        path, 'removedneuronerldamodel-%d.gensim' % year))
     return model
 
 
+def split_by_year(df):
+    df['timestamp'] = pandas.to_datetime(df[' time'])
+    df = df.sort_values(by=['timestamp'])
+    year = df['timestamp'].dt.to_period('Y')
+    return df.groupby(year)
+
+
+def split_by_quarter(df):
+    year = df['timestamp'].dt.to_period('Q')
+    return df.groupby(year)
+
+
 def classify_docs(df, model):
-    clsfyd = [list() for _ in range(model.num_topics)]
+    quarter_docs = split_by_quarter(df)
+    clsfyd = [[pandas.DataFrame() for _ in range(model.num_topics)]
+              for _ in quarter_docs]
 
     dictionary = model.id2word
-    for _, row in tqdm(df.iterrows(), total=df.shape[0]):
-        body = dictionary.doc2bow(row['tokenized_body'])
-        vector = model[body]
-        cat = max(vector, key=lambda x: x[1])[0]
-        clsfyd[cat].append(row)
-
+    for q_idx, (_, quarter) in tqdm(enumerate(quarter_docs), total=len(quarter_docs)):
+        for d_idx, row in quarter.iterrows():
+            body = dictionary.doc2bow(row['tokenized_body'])
+            vector = model[body]
+            cat = max(vector, key=lambda x: x[1])[0]
+            clsfyd[q_idx][cat] = clsfyd[q_idx][cat].append(row)
     return clsfyd
 
 
@@ -58,19 +74,22 @@ def get_parts(doc, query):
 
 
 def get_5w1h(row, extractor):
-    doc = Document(row['title'], row[' description'],
-                   row[' body'], row[' time'])
+    doc = Document(row[1]['title'], row[1][' description'],
+                   row[1][' body'], row[1][' time'])
     # doc = Document.from_text(row[' body'], row[' time'])
-    doc = extractor.parse(doc)
+    try:
+        doc = extractor.parse(doc)
 
-    return {
-        'when': get_parts(doc, 'when'),
-        'where': get_parts(doc, 'where'),
-        'what': get_parts(doc, 'what'),
-        'who': get_parts(doc, 'who'),
-        'why': get_parts(doc, 'why'),
-        'how': get_parts(doc, 'how')
-    }
+        return {
+            'when': get_parts(doc, 'when'),
+            'where': get_parts(doc, 'where'),
+            'what': get_parts(doc, 'what'),
+            'who': get_parts(doc, 'who'),
+            'why': get_parts(doc, 'why'),
+            'how': get_parts(doc, 'how')
+        }
+    except RuntimeError:
+        return None
 
 
 def get_issue_stats(rows, extractor):
@@ -81,8 +100,11 @@ def get_issue_stats(rows, extractor):
     why_counter = Counter()
     how_counter = Counter()
 
-    for row in tqdm(rows):
+    for row in tqdm(rows.iterrows(), total=rows.shape[0]):
         res = get_5w1h(row, extractor)
+
+        if not res:
+            continue
 
         when_counter.update({res['when']: 1})
         where_counter.update({res['where']: 1})
@@ -101,40 +123,33 @@ def get_issue_stats(rows, extractor):
     }
 
 
-def main(offset):
+def __main(offset):
     df = get_articles('./data', load=True)
-    model = get_LDA_model('./saves')
-    clsfyd = classify_docs(df, model)
+    clsfyd = list()
+    for i, yeardf in split_by_year(df):
+        if int(i.year) == 2018:
+            continue
+        model = get_LDA_model('./saves', int(i.year))
+        clsfyd += classify_docs(yeardf, model)
+    print(len(clsfyd))
     resf = open('res_on_issue.txt', 'w')
 
     extractor = MasterExtractor()
-    for cat, item in enumerate(clsfyd):
-        if cat < offset:
-            continue
+    for idx, quarter in enumerate(clsfyd):
+        print('\n===Quarter %d===\n' % idx)
+        resf.write('===Quarter %d===\n' % idx)
+        for cat, docs in enumerate(quarter):
+            res = get_issue_stats(docs, extractor)
 
-        res = get_issue_stats(item, extractor)
-
-        print('===Category %d===' % cat)
-        resf.write('===Category %d===\n' % cat)
-        for key in res.keys():
-            print(key, res[key].most_common(3))
-            resf.write(str(key))
-            resf.write(' ')
-            resf.write(str(res[key].most_common(3)))
-            resf.write('\n')
-        resf.flush()
+            print('\n===Category %d===\n' % cat)
+            resf.write('===Category %d===\n' % cat)
+            for key in res:
+                print(key, res[key].most_common(3))
+                resf.write('%s: %s\n' % (key, str(res[key].most_common(3))))
+            print('\n')
+            resf.flush()
     resf.close()
-
-    # dictionary = model.id2word
-    # other_texts = [
-    #     ['Mexico', 'Korean', 'European'],
-    #     ['US Air Force', 'New Zealand', 'French']]
-    # other_corpus = [dictionary.doc2bow(text) for text in other_texts]
-
-    # for unseen_doc in other_corpus:
-    #    vector = model[unseen_doc]
-    #    print(vector)
 
 
 if __name__ == '__main__':
-    main(parser.parse_args().offset)
+    __main(parser.parse_args().offset)
