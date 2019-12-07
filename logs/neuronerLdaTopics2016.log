@@ -1,0 +1,19 @@
+b'0\n0.082*"North" + 0.076*"North Korea" + 0.057*"North Korean" + 0.031*"," + 0.026*"Kim Jong" + 0.020*"Kim" + 0.019*"Pyongyang" + 0.019*"Seoul" + 0.019*"Yonhap" + 0.016*"South Korea" + 0.016*"Korean" + 0.015*"." + 0.014*"South Korean" + 0.011*"South" + 0.011*"\'s"'
+
+b'1\n0.113*"South Korea" + 0.060*"South Korean" + 0.058*"Yonhap" + 0.039*"Seoul" + 0.033*"," + 0.014*"." + 0.013*"South Koreans" + 0.013*"\'s" + 0.013*"Korean" + 0.010*"said" + 0.009*"``" + 0.008*"\'\'" + 0.007*"Seongju" + 0.006*")" + 0.006*"("'
+
+b'2\n0.054*"," + 0.033*"." + 0.029*"Korean" + 0.026*"Korea" + 0.025*"Seoul" + 0.024*"Japan" + 0.017*"\xe2\x80\x9d" + 0.015*"Japanese" + 0.013*"\xe2\x80\x9c" + 0.012*"\xe2\x80\x99" + 0.011*"Koreans" + 0.008*"said" + 0.008*"Tokyo" + 0.007*"percent" + 0.007*"The"'
+
+b'3\n0.063*"US" + 0.041*"U.S." + 0.030*"," + 0.026*"American" + 0.022*"Trump" + 0.021*"Hwang" + 0.020*"Ban" + 0.019*"." + 0.018*"Obama" + 0.017*"South Korea" + 0.016*"Korea" + 0.016*"English" + 0.012*"Han" + 0.011*"UN" + 0.010*"Japan"'
+
+b'4\n0.054*"Iran" + 0.029*"," + 0.021*"Middle East" + 0.019*"Korea" + 0.016*"Germany" + 0.015*"German" + 0.014*"Iranian" + 0.014*"Turkey" + 0.013*"Korean" + 0.012*"." + 0.009*"Turkish" + 0.009*"Syria" + 0.008*"Taiwan" + 0.008*"Kuwait" + 0.007*"Canada"'
+
+b'5\n0.051*"Korea" + 0.043*"," + 0.024*"Korean" + 0.017*"." + 0.015*"Joel Lee" + 0.011*"Seoul" + 0.010*"France" + 0.009*"Zika" + 0.009*"French" + 0.009*"ASEAN" + 0.009*"Philippines" + 0.008*"EU" + 0.008*"Asia" + 0.007*"Europe" + 0.006*"Vietnam"'
+
+b'6\n0.083*"Park" + 0.038*"Choi" + 0.036*"Park Geun" + 0.033*"," + 0.020*"." + 0.020*"Cheong Wa Dae" + 0.017*"Seoul" + 0.012*"Choi Soon" + 0.007*"Park\'s" + 0.007*"Park\xe2\x80\x99s" + 0.006*"Yonhap" + 0.005*"\xe2\x80\x99" + 0.005*"(" + 0.004*"Jeong" + 0.004*"Samsung"'
+
+b'7\n0.039*"Saenuri Party" + 0.037*"," + 0.029*"National Assembly" + 0.024*"Park" + 0.018*"Park Geun" + 0.017*"Minjoo Party" + 0.017*"." + 0.016*"Kim" + 0.016*"Saenuri" + 0.011*"\xe2\x80\x9d" + 0.010*"\xe2\x80\x99s" + 0.010*"\xe2\x80\x99" + 0.010*"Minjoo Party of Korea" + 0.009*"party" + 0.009*"People\xe2\x80\x99s Party"'
+
+b'8\n0.038*"," + 0.032*"Kim" + 0.031*"." + 0.024*"Lee" + 0.021*"Chinese" + 0.018*"Gyeonggi Province" + 0.017*"Seoul" + 0.015*"Busan" + 0.014*"Lim Jeong" + 0.011*"The" + 0.009*"(" + 0.009*"police" + 0.009*"Kang" + 0.008*")" + 0.008*"Incheon"'
+
+b'9\n0.069*"North Korea" + 0.051*"China" + 0.050*"U.S." + 0.038*"North" + 0.036*"South Korea" + 0.026*"," + 0.022*"Seoul" + 0.017*"Pyongyang" + 0.016*"THAAD" + 0.016*"Washington" + 0.016*"U.N." + 0.015*"." + 0.014*"Chinese" + 0.013*"Beijing" + 0.011*"Japan"'

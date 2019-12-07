@@ -34,6 +34,11 @@ def preprocess(data_path):
     df_data.to_pickle('preprocess_result.pkl')
     return df_data
 
+def tokenize(word_list):
+    res = [None] * len(word_list)
+    for i, body in enumerate(word_list):
+        res[i] = word_tokenize(body)
+    return res
 
 if __name__ == '__main__':
     preprocess('./data')

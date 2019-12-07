@@ -1,0 +1,19 @@
+b'0\n0.060*"South Korean" + 0.059*"South Korea" + 0.048*"China" + 0.035*"UN" + 0.035*"Chinese" + 0.029*"," + 0.027*"Yonhap" + 0.024*"Ban" + 0.020*"Seoul" + 0.017*"Russia" + 0.014*"." + 0.013*"Beijing" + 0.013*"Kang" + 0.009*"Russian" + 0.008*"\'s"'
+
+b'1\n0.086*"Park" + 0.036*"Choi" + 0.035*"Lee" + 0.034*"Park Geun" + 0.034*"," + 0.023*"." + 0.022*"Kim" + 0.021*"Constitutional Court" + 0.015*"Choi Soon" + 0.010*"Seoul" + 0.010*"Samsung" + 0.009*"Park\xe2\x80\x99s" + 0.009*"Yonhap" + 0.009*"Park\'s" + 0.008*"Lee Jae"'
+
+b'2\n0.066*"Japan" + 0.059*"Korean" + 0.040*"Seoul" + 0.040*"Japanese" + 0.035*"," + 0.028*"Korea" + 0.024*"South Korea" + 0.023*"." + 0.019*"Tokyo" + 0.010*"Koreans" + 0.010*"South Korean" + 0.009*"\xe2\x80\x9d" + 0.009*"\xe2\x80\x9c" + 0.008*"Busan" + 0.006*"\xe2\x80\x99"'
+
+b'3\n0.042*"South Korean" + 0.036*"South Korea" + 0.033*"Army" + 0.033*"Navy" + 0.030*"Air Force" + 0.026*"Korean War" + 0.025*"Yonhap" + 0.017*"Ministry of National Defense" + 0.016*"," + 0.014*"Yoon" + 0.014*"Pohang" + 0.012*"Jun" + 0.011*"South Korea`s" + 0.010*"military" + 0.010*"Coast Guard"'
+
+b'4\n0.102*"US" + 0.044*"South Korea" + 0.035*"North Korea" + 0.029*"China" + 0.028*"Seoul" + 0.027*"," + 0.020*"Washington" + 0.019*"Trump" + 0.017*"." + 0.016*"THAAD" + 0.015*"Donald Trump" + 0.014*"South Korean" + 0.012*"United States" + 0.011*"Korean" + 0.009*"Yonhap"'
+
+b'5\n0.065*"Korea" + 0.040*"," + 0.036*"Malaysia" + 0.019*"Korean" + 0.019*"Malaysian" + 0.018*"ASEAN" + 0.017*"." + 0.015*"Joel Lee" + 0.011*"Indonesia" + 0.011*"Seoul" + 0.010*"Philippines" + 0.009*"Vietnam" + 0.009*"PyeongChang" + 0.008*"Olympics" + 0.008*"Indonesian"'
+
+b'6\n0.052*"," + 0.043*"Seoul" + 0.034*"Yonhap" + 0.030*"." + 0.027*"Hwang" + 0.016*"Hwang Kyo" + 0.016*"South Korea" + 0.012*"(" + 0.011*")" + 0.010*"said" + 0.010*"The" + 0.009*"Sewol" + 0.007*"Gyeonggi Province" + 0.006*"Kim Da" + 0.005*"Busan"'
+
+b'7\n0.074*"Moon" + 0.052*"Moon Jae" + 0.036*"," + 0.026*"Democratic Party" + 0.023*"Liberty Korea Party" + 0.020*"National Assembly" + 0.020*"Bareun Party" + 0.018*"Cheong Wa Dae" + 0.017*"Yonhap" + 0.016*"." + 0.013*"Park Geun" + 0.012*"Hong" + 0.010*"People\'s Party" + 0.010*"Seoul" + 0.009*"Democratic Party of Korea"'
+
+b'8\n0.114*"North Korea" + 0.082*"North" + 0.058*"North Korean" + 0.043*"Kim Jong" + 0.029*"," + 0.028*"Pyongyang" + 0.018*"Yonhap" + 0.017*"." + 0.016*"Kim" + 0.013*"South Korea" + 0.012*"\'s" + 0.009*"Korean" + 0.009*"US" + 0.008*"Seoul" + 0.008*"said"'
+
+b'9\n0.063*"," + 0.034*"." + 0.024*"Ahn" + 0.021*"South Korea" + 0.018*"\xe2\x80\x9d" + 0.017*"percent" + 0.013*"\xe2\x80\x99" + 0.013*"\xe2\x80\x9c" + 0.012*"Yoo" + 0.012*"South Koreans" + 0.009*"\xe2\x80\x99s" + 0.008*"said" + 0.007*"The" + 0.006*"(" + 0.006*")"'

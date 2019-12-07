@@ -1,0 +1,19 @@
+b'0\n0.098*"Lee" + 0.031*"Russia" + 0.026*"," + 0.019*"English" + 0.017*"Russian" + 0.016*"Sung" + 0.015*"." + 0.014*"Hong" + 0.012*"Moscow" + 0.010*"Lee Wan" + 0.009*"Yonhap" + 0.008*"Kim" + 0.008*"Lee Myung" + 0.007*"POSCO" + 0.007*"Navy"'
+
+b'1\n0.163*"U.S." + 0.052*"North Korea" + 0.042*"Washington" + 0.039*"South Korea" + 0.034*"United States" + 0.029*"Seoul" + 0.028*"," + 0.016*"." + 0.013*"American" + 0.013*"Iran" + 0.010*"Obama" + 0.010*"Barack Obama" + 0.010*"Yonhap" + 0.010*"Russia" + 0.009*"nuclear"'
+
+b'2\n0.037*"Seoul" + 0.035*"U.S." + 0.035*"," + 0.021*"South Korea" + 0.020*"THAAD" + 0.017*"Han" + 0.016*"." + 0.013*"South Korean" + 0.011*"Navy" + 0.011*"Defense Ministry" + 0.011*"Army" + 0.010*"Air Force" + 0.009*"Shin Hyon" + 0.009*"military" + 0.009*"Han Min"'
+
+b'3\n0.147*"Japan" + 0.068*"Japanese" + 0.042*"Seoul" + 0.039*"Tokyo" + 0.037*"South Korea" + 0.031*"Korean" + 0.027*"Abe" + 0.024*"," + 0.017*"Korea" + 0.015*"World War II" + 0.015*"." + 0.014*"South Korean" + 0.013*"Shinzo Abe" + 0.010*"Yonhap" + 0.008*"Park Geun"'
+
+b'4\n0.097*"North" + 0.093*"North Korea" + 0.044*"North Korean" + 0.034*"Korean" + 0.029*"," + 0.027*"Pyongyang" + 0.026*"Seoul" + 0.025*"Kim" + 0.023*"South" + 0.022*"South Korean" + 0.018*"Kim Jong" + 0.018*"Koreas" + 0.017*"Yonhap" + 0.016*"." + 0.014*"South Korea"'
+
+b'5\n0.113*"South Korea" + 0.053*"Yonhap" + 0.048*"Park" + 0.045*"South Korean" + 0.029*"," + 0.028*"Seoul" + 0.019*"Park Geun" + 0.019*"U.N." + 0.016*"." + 0.012*"\'s" + 0.011*"``" + 0.009*"\'\'" + 0.008*"said" + 0.007*"South Koreans" + 0.007*"Park\'s"'
+
+b'6\n0.060*"," + 0.036*"." + 0.027*"Korean" + 0.023*"Korea" + 0.020*"Seoul" + 0.013*"\xe2\x80\x9d" + 0.010*"\xe2\x80\x9c" + 0.010*"Koreans" + 0.010*"said" + 0.010*"The" + 0.010*"\xe2\x80\x99" + 0.007*"percent" + 0.006*"\xe2\x80\x99s" + 0.005*")" + 0.005*"("'
+
+b'7\n0.058*"Korea" + 0.042*"," + 0.024*"Korean" + 0.018*"." + 0.015*"Joel Lee" + 0.012*"Seoul" + 0.010*"Turkey" + 0.008*"ASEAN" + 0.008*"Indonesia" + 0.007*"Australia" + 0.007*"Syria" + 0.007*"\xe2\x80\x9d" + 0.007*"India" + 0.007*"Europe" + 0.007*"Paris"'
+
+b'8\n0.199*"China" + 0.077*"Chinese" + 0.037*"Beijing" + 0.028*"," + 0.019*"." + 0.012*"South Korea" + 0.008*"South China Sea" + 0.008*"Xi Jinping" + 0.007*"AIIB" + 0.007*"Asia" + 0.006*"Korea" + 0.006*"\xe2\x80\x99" + 0.006*"Xi" + 0.005*"Russia" + 0.005*"U.S."'
+
+b'9\n0.035*"," + 0.027*"MERS" + 0.023*"Saenuri Party" + 0.022*"Park" + 0.021*"." + 0.020*"NPAD" + 0.019*"Kim" + 0.015*"National Assembly" + 0.012*"New Politics Alliance for Democracy" + 0.012*"Park Geun" + 0.009*"Seoul" + 0.009*"\xe2\x80\x99" + 0.009*"Moon" + 0.008*"\xe2\x80\x9d" + 0.008*"\xe2\x80\x99s"'
