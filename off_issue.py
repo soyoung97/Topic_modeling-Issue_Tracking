@@ -30,7 +30,7 @@ def get_articles(data_path, load=False):
     return total_df
 
 def get_LDA_model(path):
-    model = LdaModel.load(os.path.join(path, 'model.gensim'))
+    model = LdaModel.load(os.path.join(path, 'removedneuronerldamodel-2017.gensim'))
     return model
 
 def topic_numbering(load = False):
@@ -40,7 +40,7 @@ def topic_numbering(load = False):
     model = get_LDA_model('./saves')
     dictionary = model.id2word
     #print(df['tokenized_body'])
-    tc = [dictionary.doc2bow(text) for text in df['tokenized_body']]
+    tc = [dictionary.doc2bow(text) for text in df['neuroner_tokenized']]
     topic_assign = []
     for ins in tc:
         vector = model.get_document_topics(ins)
@@ -86,10 +86,10 @@ def get_answer_from_doc(rep_doc):
     return (top_who_answer, top_what_answer, top_when_answer, top_where_answer, top_why_answer, top_how_answer)
 
 
-EPS = 10
-MSAMPLE = 5
+EPS = 15
+MSAMPLE = 3
 WVec = 150.0
-WTime = 0.000002
+WTime = 0.0000005
 
 def bow2vec(dictionary, texts, clen):
     tlen = texts.shape[0]
@@ -107,7 +107,7 @@ def do_clustering(model, topic0):
     timedata = topic0['timestamp'].to_numpy().reshape(tlen, 1)
     dictionary = model.id2word
     clen = max(dictionary.keys())
-    tc = bow2vec(dictionary, topic0['tokenized_body'], clen)
+    tc = bow2vec(dictionary, topic0['neuroner_tokenized'], clen)
     for i in range(tlen):
         tc[i, clen] = topic0['timestamp'].iloc[i] * WTime
     clustering = DBSCAN(eps=EPS, min_samples=MSAMPLE).fit_predict(tc)
@@ -116,7 +116,7 @@ def do_clustering(model, topic0):
 def get_rep_doc(model, docs):
     dictionary = model.id2word
     clen = max(dictionary.keys())
-    tc = bow2vec(dictionary, docs['tokenized_body'], clen)
+    tc = bow2vec(dictionary, docs['neuroner_tokenized'], clen)
     tlen = docs.shape[0]
     for i in range(tlen):
         tc[i, clen] = docs['timestamp'].iloc[i] * WTime
@@ -135,7 +135,7 @@ def get_rep_doc(model, docs):
 def main():
     df = topic_numbering(True)
     model = get_LDA_model('./saves')
-    topic0 = df[df.topic_num == 0]
+    topic0 = df[df.topic_num == 1]
     clustering = do_clustering(model, topic0)
     topic0['event'] = clustering
     #print("clusters: %d " % (max(clustering) + 1))
