@@ -1,10 +1,39 @@
 \section{Introduction}
 
-Due to the massive increase of news articles in the internet,
-the importance of topic analysis and issue tracking is growing.
-However, the massive amount of data makes people hard to do the work manually,
-so the automatic process held by the machine is needed.
-In this paper, we suggest an automatic news analysis process, which consists three steps:
-\textit{1. trend analysis}, \textit{2. on-issue event tracking}, and \textit{3. off-issue event tracking}.
-After the experiment, we see that our trend analysis model clusters the news articles by topics
-very well, and event tracking models find out the events for each issue(topic). 
+Online contents has grown big recently,
+and people are viewing more news on the internet.
+However, due to the heavy amount of data(news),
+it has a limitation to categorize the news manually.
+Also, it is almost impossible to track the events
+related to the issue while looking all the articles.
+
+Looking at all yearly issues,
+we can see that the news articles can be clusted
+into some issues.
+For example, in the case of the year 2017,
+there was a lot of news related with the former president
+and her political crimes.
+The term \textit{Trend Analysis} means
+clustering those kind of news articles and analyze the clusters. 
+And, for each issue, we can see the \textit{events} related to the issue
+and we can make the timeline of the main events for an issue.
+In detail, there are two kinds of event: the first one is
+the event which is directly related to an issue,
+and the second one is not directly linked, but topically related issue.
+In the paper, we call the first one as \textit{``on-issue event''},
+and the second one as \textit{``off-issue event(related-issue event)''}
+
+In this paper, we suggest a method to analyze the trends
+and track the events by three steps: 1. \textit{Trend Analysis},
+2. \textit{On-issue Event Tracking}, and 3. \textit{Off-issue Event Tracking}.
+
+After doing all the progress,
+we could analyze the yearly trends of Korea from 2015 to 2017. 
+Also, we tried to track down some important issues extracted from above.
+We captured four quarterly events for each issue,
+and also tracked several off-issue events.
+
+Our research is important and effective because we minimized the human(manual) efforts
+throughout the progress, for summarizing the 270K news articles.
+The methods we suggest in this paper can be widely used in
+yearly trend analysis, not just news, but marketing, research, or the other fields as well.

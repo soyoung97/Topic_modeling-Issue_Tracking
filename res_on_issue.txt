@@ -51,3 +51,78 @@ what: [('dies', 2), ('announced Thursday', 2), ('rejected demands by dissenting 
 who: [('Korea', 7), ('Ahn', 6), ('the government', 5)]
 why: [('it', 12), ('Korea', 7), ('he', 6)]
 how: [('create free medical school .', 2), ('underperforming public officials .', 1), ('Roughly 75 percent of victims and survivors in last year', 1)]
+===Category 9===
+when: [('Monday', 35), ('Tuesday', 25), ('Wednesday', 21)]
+where: [('unknown', 39), ('South Korea', 33), ('Seoul', 23)]
+what: [('announced that it', 3), ('edges down amid history textbook row', 2), ('confirms state textbook plan', 2)]
+who: [('Park', 25), ('President Park Geun-hye', 9), ("Park 's approval rating", 7)]
+why: [('Park', 31), ('he', 9), ('it', 9)]
+how: [('her American counterpart , Barack Obama , a senior presidential', 2), ('A parliamentary review of next year ’s government budget kicked', 2), ('as new spokesperson .', 2)]
+===Quarter 4===
+===Category 3===
+when: [('Friday', 4), ('Tuesday', 3), ('Thursday', 3)]
+where: [('South Korea', 5), ('Seoul', 4), ('unknown', 2)]
+what: [('sought a one-year jail term', 1), ('gets 16-month jail term', 1), ('will be banned for half', 1)]
+who: [('Prosecutors on Tuesday', 2), ("South Korea 's former Prime Minister Lee Wan-koo", 2), ('Park', 2)]
+why: [('Prosecutors', 2), ('Park', 2), ('they', 2)]
+how: [('a former South Korean prime minister on charges of receiving', 1), ('receiving illegal political .', 1), ('Two South Korean baseball pitchers facing illegal gambling charges were', 1)]
+===Category 8===
+when: [('Wednesday', 25), ('Monday', 24), ('Tuesday', 19)]
+where: [('U.S.', 52), ('North Korea', 38), ('South Korea', 33)]
+what: [('conducted what it', 2), ('inspects readiness at NLL aboard Aegis warship', 1), ('activated its fifth THAAD missile defense battery , manufacturer Lockheed Martin', 1)]
+who: [('South Korea', 14), ('Korea', 13), ('North Korea', 10)]
+why: [('it', 15), ('U.S.', 14), ('Korea', 10)]
+how: [('deploy B-52 strategic bomber over Korean Peninsula .', 2), ('of Chinese soldiers killed in Korean War .', 2), ('’s joint military drills by South Korea and the United', 2)]
+===Quarter 5===
+===Category 3===
+when: [('Friday', 6), ('Thursday', 5), ('Tuesday', 5)]
+where: [('unknown', 7), ('Seoul', 3), ('South Korea', 2)]
+what: [('are considerable reasons to believe he', 1), ('indicted over alleged illegal rallies', 1), ('upholds 16-month jail term', 1)]
+who: [('he', 1), ('Ex-chief of umbrella labor union', 1), ('Court', 1)]
+why: [('Prosecutors', 3), ('Former senior prosecutor', 2), ('he', 2)]
+how: [('Former KORAIL chief arrested over corruption in urban development project', 1), ('alleged illegal rallies .', 1), ('a lower court on a lawmaker , formerly affiliated with', 1)]
+===Category 8===
+when: [('Monday', 22), ('Thursday', 20), ('Wednesday', 20)]
+where: [('U.S.', 25), ('South Korea', 19), ('North Korea', 17)]
+what: [('will be the first', 2), ('agreed Wednesday', 2), ('affects 110 planes', 1)]
+who: [('South Korea and the United States', 9), ('South Korea', 8), ('North Korea', 6)]
+why: [('it', 19), ('Seoul', 7), ('they', 5)]
+how: [('for military talks .', 2), ("'s state-run media accused the South Korean Navy of violating", 2), ('the latest disruption of the Global Positioning System signal ,', 1)]
+===Quarter 6===
+===Category 3===
+when: [('Thursday', 10), ('Tuesday', 6), ('Monday', 6)]
+where: [('Seoul', 13), ('unknown', 10), ('Korea', 4)]
+what: [('have indicted nine people , including a lieutenant colonel', 1), ('has designated Lee Keum-ro', 1), ('will replace Bae Jung-ho', 1)]
+who: [('Cheong Wa Dae', 4), ('Park', 3), ('Prosecutors', 2)]
+why: [('Park', 7), ('he', 5), ('Cheong Wa Dae', 4)]
+how: [('a former executive of a local defense firm , identified', 1), ('investigate senior prosecutor over suspicious stock purchase .', 1), ("retired general as head of presidential advisory panel 's secretariat", 1)]
+===Category 8===
+when: [('Tuesday', 32), ('Monday', 30), ('Wednesday', 29)]
+where: [('U.S.', 39), ('North Korea', 30), ('South Korea', 26)]
+what: [('threatens military actions', 2), ('will convene a session', 2), ('agreed Thursday', 2)]
+who: [('N. Korea', 13), ('North Korea', 10), ('South Korea', 10)]
+why: [('it', 30), ('Park', 11), ('N. Korea', 10)]
+how: [('not international treaties would allow Seoul ’s use of nuclear', 2), ('a wide range of areas , including tackling cyber hacking', 1), ('its strategic force anniversary : military .', 1)]
+===Quarter 7===
+===Category 3===
+when: [('Wednesday', 37), ('Friday', 34), ('Thursday', 29)]
+where: [('Seoul', 78), ('unknown', 55), ('South Korea', 45)]
+what: [("wo n't attend APEC summit", 2), ('was implicated as an accomplice', 2), ('will soon initiate the process', 2)]
+who: [('Park', 26), ('Choi', 15), ('President Park Geun-hye', 10)]
+why: [('Park', 26), ('Prosecutors', 17), ('it', 15)]
+how: [(', presidential secretary offer to resign .', 3), ('question key figures in scandal at detention center .', 2), ("Presidential office dismisses claim over Park 's retirement residence .", 1)]
+===Category 8===
+when: [('Tuesday', 18), ('Friday', 10), ('Wednesday', 10)]
+where: [('US', 18), ('North Korea', 17), ('Korea', 8)]
+what: [('conducts combined arms drill', 2), ('renews calls for national unity', 1), ('hacked last month', 1)]
+who: [('South Korea', 5), ('Korea', 4), ('South Korea and Japan', 4)]
+why: [('it', 15), ('Seoul', 5), ('there', 2)]
+how: [('South Korean President Park Geun-hye on Saturday renewed her calls', 1), ("'s military cyber command hacked last month .", 1), ('crashed military chopper recovered : Navy .', 1)]
+===Quarter 8===
+===Category 2===
+when: [('Tuesday', 5), ('Wednesday', 4), ('Friday', 3)]
+where: [('PyeongChang', 5), ('Seoul', 4), ('North Korea', 3)]
+what: [('engages in phone diplomacy', 1), ('to hold talks', 1), ('will hold a meeting', 1)]
+who: [('Hwang', 2), ('ministry', 2), ('Iraq', 1)]
+why: [('Korea', 2), ('he', 1), ('Iraq', 1)]
+how: [(', particularly in the infrastructure development , as he strove', 1), ('Foreign ministers of Korea , Iraq to hold talks in', 1), ("hold overseas missions ' meeting this week .", 1)]
