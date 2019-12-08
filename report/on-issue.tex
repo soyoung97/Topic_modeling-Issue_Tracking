@@ -32,7 +32,7 @@ we classify the documents in the quarter groups.
 If we give a tokenized sentence to the LDA model,
 the model outputs the probability for each group.
 We choose the group with maximum value, and assign the document to the group.
-So, for each quarter, there are 20 classified groups of news articles.
+So, for each quarter, there are 21 classified groups of news articles.
 
 \subsection{Event Extraction}
 
@@ -48,3 +48,8 @@ We decided to use columns \textit{title}, \textit{description}, \textit{body}, a
 from the given dataset as an input to get a result.
 For each group, we count the frequencies of each feature of the articles,
 and select the most frequent terms for each feature, treat them as an event.
+
+In details, to reduce the time of event extraction,
+we choose two yearly issues from the list, and do event extraction for each issue.
+So each yearly issue has four event extraction result: in Q1, Q2, Q3, and Q4.
+For each quarter result, we identify an event based on the result and align them on the timeline.

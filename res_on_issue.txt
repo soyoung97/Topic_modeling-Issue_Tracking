@@ -1,0 +1,53 @@
+===Quarter 0===
+===Category 2===
+when: [('Wednesday', 22), ('Monday', 20), ('Tuesday', 19)]
+where: [('unknown', 39), ('South Korea', 29), ('Seoul', 20)]
+what: [('resigned as a vice president four days', 2), ('will launch a crackdown', 2), ('went into the red for the first time , according to the data', 2)]
+who: [('Korean Air', 4), ('The government', 4), ('Park', 3)]
+why: [('it', 20), ('they', 8), ('Korea', 5)]
+how: [('Korean aid worker in Sierra Leone to be sent to', 1), ('Korean medic tests negative for Ebola .', 1), ('impacts Korean smoking habits .', 1)]
+===Category 9===
+when: [('Monday', 39), ('Tuesday', 27), ('Friday', 26)]
+where: [('unknown', 38), ('Seoul', 27), ('South Korea', 24)]
+what: [('nears 60 %', 2), ('won the primary vote', 2), ('rejected a recent demand', 2)]
+who: [('Park', 26), ('President Park Geun-hye', 10), ('Geun-hye', 5)]
+why: [('Park', 28), ('he', 14), ('it', 6)]
+how: [('a new high last week , amid fears that her', 2), ('secure new sources of income through its economic reform drive.The', 2), ('agency chief Lee Byung-kee as her new chief of staff', 2)]
+===Quarter 1===
+===Category 2===
+when: [('Wednesday', 40), ('Monday', 38), ('Tuesday', 34)]
+where: [('South Korea', 58), ('Seoul', 46), ('Middle East', 43)]
+what: [('announced Sunday', 2), ('reports two more MERS deaths', 2), ('being 53.8', 2)]
+who: [('S. Korea', 31), ('South Korea', 10), ('Seoul', 10)]
+why: [('S. Korea', 30), ('it', 23), ('they', 12)]
+how: [('Average age of recovered MERS patients 53.8 .', 2), ('Korean MERS suspect monitored in Slovakia .', 2), ('so far been hit the hardest by Middle East respiratory', 2)]
+===Category 9===
+when: [('Monday', 31), ('Tuesday', 29), ('Thursday', 23)]
+where: [('unknown', 39), ('Seoul', 17), ('South Korea', 12)]
+what: [('could encroach upon the executive branch ’s', 2), ('accused President Park Geun-hye', 2), ('had asked the government', 1)]
+who: [('Park', 12), ('President Park Geun-hye', 12), ("Park 's approval rating", 5)]
+why: [('Park', 17), ('he', 11), ('they', 5)]
+how: [('a sharp decline from 40.3 percent to 34.6 percent last', 2), ('all Korean history textbooks revised in 2013 was legal.At the', 1), ('on civil service pensions .', 1)]
+===Quarter 2===
+===Category 2===
+when: [('Wednesday', 26), ('Monday', 25), ('Tuesday', 23)]
+where: [('S. Korea', 34), ('unknown', 33), ('South Korea', 31)]
+what: [('reports no new MERS cases', 7), ('reports no additional MERS cases', 3), ('reports additional case', 2)]
+who: [('S. Korea', 18), ('South Korea', 8), ('Korea', 6)]
+why: [('S. Korea', 23), ('it', 8), ('Park', 7)]
+how: [('an additional case of Middle East Respiratory Syndrome Friday ,', 2), ('no additional MERS cases for 21st day .', 2), ("'s new pick for health minister.Chung Chin-youb , a professor", 2)]
+===Category 9===
+when: [('Thursday', 24), ('Tuesday', 20), ('Monday', 17)]
+where: [('unknown', 27), ('Korea', 18), ('South Korea', 14)]
+what: [('will visit the United States', 2), ('pardons SK chairman', 2), ('seeks to impeach home affairs minister', 2)]
+who: [('President Park Geun-hye', 10), ('Park', 6), ('the government', 4)]
+why: [('Park', 15), ('he', 12), ('she', 5)]
+how: [('receiving illegal political funds worth 350 million won ( $', 2), ('granted special pardons to thousands of Koreans convicted of minor', 2), ('The main parties agreed Thursday to convene a parliamentary panel', 1)]
+===Quarter 3===
+===Category 2===
+when: [('Thursday', 18), ('Monday', 17), ('Sunday', 14)]
+where: [('South Korea', 28), ('Seoul', 27), ('unknown', 22)]
+what: [('dies', 2), ('announced Thursday', 2), ('rejected demands by dissenting party members', 2)]
+who: [('Korea', 7), ('Ahn', 6), ('the government', 5)]
+why: [('it', 12), ('Korea', 7), ('he', 6)]
+how: [('create free medical school .', 2), ('underperforming public officials .', 1), ('Roughly 75 percent of victims and survivors in last year', 1)]

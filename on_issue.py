@@ -123,6 +123,13 @@ def get_issue_stats(rows, extractor):
     }
 
 
+TO_FIND = {
+    0: [2, 9],  # 2015
+    1: [3, 8],  # 2016
+    2: [2, 4]  # 2017
+}
+
+
 def __main(offset):
     df = get_articles('./data', load=True)
     clsfyd = list()
@@ -136,18 +143,16 @@ def __main(offset):
 
     extractor = MasterExtractor()
     for idx, quarter in enumerate(clsfyd):
-        print('\n===Quarter %d===\n' % idx)
         resf.write('===Quarter %d===\n' % idx)
         for cat, docs in enumerate(quarter):
-            res = get_issue_stats(docs, extractor)
+            if cat in TO_FIND[idx // 4]:
+                res = get_issue_stats(docs, extractor)
 
-            print('\n===Category %d===\n' % cat)
-            resf.write('===Category %d===\n' % cat)
-            for key in res:
-                print(key, res[key].most_common(3))
-                resf.write('%s: %s\n' % (key, str(res[key].most_common(3))))
-            print('\n')
-            resf.flush()
+                resf.write('===Category %d===\n' % cat)
+                for key in res:
+                    resf.write('%s: %s\n' %
+                               (key, str(res[key].most_common(3))))
+                resf.flush()
     resf.close()
 
 
