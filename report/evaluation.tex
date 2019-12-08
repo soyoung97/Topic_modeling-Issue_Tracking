@@ -1,8 +1,25 @@
 \section{Evaluation}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+\subsection{Trend analysis evaluation}
+To evaluate our result, we first try to show that our trend analysis
+works well. To do that, we collect other document with topic label.
+With these test set, its trend analysis result indirectly shows our
+accuracy of trend analysis.
+\subsection{Selecing test set}
+We use reuters data set. It consists of more than 9000 documents
+with more than 70 topics. But, the similairty of document is important
+because evaluation on very diffrent set of doucments dosen't imply
+any meaningful result. To resolve that, we decided to extract 10 topics
+with most similairty between our dataset. It is achived by calculating
+document similarity between reuters dataset and our news dataset.
+
+To pick most similar topic, we compute maximum similairty within documents
+in topic and minimum similairty bewteen reuters and news dataset. Due to
+largeness of dataset, we choose only subset of dataset to calculate
+minimum/maximum similairty bewteen groups.
+
+\subsection{Reuters evaluation}
+With reuters dataset with 10 pre-classified topics, we generate LDA
+model for reuters dataset and make 10 topics. And we classified the topic
+with given label. In result, we successfuly classified 7 topics from
+LDA result. It shows that our LDA model seems to work correctly.
