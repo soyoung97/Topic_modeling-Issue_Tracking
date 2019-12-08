@@ -6,8 +6,8 @@ from gensim.models import LdaModel
 from gensim.corpora import Dictionary
 from nltk.corpus import stopwords
 
-NUM_TOPICS = 10
-NUM_WORDS = 15
+NUM_TOPICS = 30
+NUM_WORDS = 50
 NER_WEIGHT = 10
 stopwords = stopwords.words('english')
 
@@ -56,7 +56,7 @@ def LDA_with_neuroner(ner_weight, year):
         # add ner with promoted frequency
         total_list = token_list + ner_list * ner_weight
         # filter out stopwords
-        tokens = list(filter(lambda x: x not in stopwords, total_list))
+        tokens = list(filter(lambda x: x not in stopwords and x not in "\.,()" and '\\xe2' not in x, total_list))
         tokenized_with_ner_count.append(tokens)
     df['tokenized_with_ner_count'] = tokenized_with_ner_count
     dictionary = Dictionary(df['tokenized_with_ner_count'])
@@ -85,7 +85,7 @@ def write_topics(model, year):
         data.append(str(t[0]) + '\n' + t[1])
 
     data = list(map(lambda x: str(x.encode('utf-8')), data))
-    with open('./logs/LdaTopics'+str(year)+'.log', 'w') as f:
+    with open('./logs/moreLdaTopics'+str(year)+'.log', 'w') as f:
         f.write('\n\n'.join(data))
     f.close()
     print("LDA model of year" + str(year) + "Topic log has been saved.")
@@ -95,6 +95,6 @@ def write_topics(model, year):
 if __name__ == '__main__':
     for year in [2015, 2016, 2017]:
         model = LDA_with_neuroner(NER_WEIGHT, year)
-        model.save('./saves/neuronerldamodel-' + str(year) + '.gensim')
-        print('LDA model has just saved as ./saves/neuronerldamodel-' + str(year) + '.gensim')
+        model.save('./saves/removedneuronerldamodel-' + str(year) + '.gensim')
+        print('LDA model has just saved as ./saves/removedneuronerldamodel-' + str(year) + '.gensim')
         write_topics(model, year)
