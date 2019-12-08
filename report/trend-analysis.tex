@@ -30,10 +30,13 @@ By using ne\_chunk from nltk and pos\_tag from nltk.tag, we extracted Named enti
 Below figure is the topic modeling result(of all time lengths from 2015 to 2017) WITH NER Promoting and WITHOUT NER Promoting. We can see the difference between those two results, and we can conclude topic modeling with NER promoting shows better performance.
 \begin{figure*}[t]
     \centering
-\includegraphics[width=0.4\textwidth]{after_ner.png}
-	\caption{Topic modeling result after NER}
-\includegraphics[width=0.4\textwidth]{before_ner.png}
-	\caption{Topic modeling result before NER}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\linewidth]{before_ner.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\linewidth]{after_ner.png}
+    \end{subfigure}
+	\caption{Topic modeling result before/after NER}
 \end{figure*}
 
 \subsubsection{Improvement - apply neuroNER instead of nltk's Named Entity Recognition.} 
