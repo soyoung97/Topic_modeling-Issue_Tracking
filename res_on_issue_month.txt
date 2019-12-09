@@ -1,0 +1,75 @@
+===Quarter 0===
+===Category 2===
+when: [('Wednesday', 9), ('Thursday', 9), ('Tuesday', 7)]
+where: [('South Korea', 13), ('unknown', 11), ('Korea', 9)]
+what: [('resigned as a vice president four days', 2), ('will launch a crackdown', 2), ('went into the red for the first time , according to the data', 2)]
+who: [('The government', 3), ('government', 2), ('Korean Air', 2)]
+why: [('they', 4), ('it', 4), ('Korea', 3)]
+how: [('Korean aid worker in Sierra Leone to be sent to', 1), ('Korean medic tests negative for Ebola .', 1), ('impacts Korean smoking habits .', 1)]
+Headline: Chaebol scions promoted to executives at young age
+when: Wednesday
+where: South Korea
+what: promoted to executives at young age
+who: Chaebol scions
+why: they
+how: to executive positions .
+===Quarter 1===
+===Category 2===
+when: [('Monday', 8), ('unknown', 6), ('Thursday', 6)]
+where: [('unknown', 13), ('South Korea', 8), ('Seoul', 7)]
+what: [('returned to service on a mornin', 1), ('leaves Gimhae International Airport', 1), ('could not be held accountable for the 2007 death care center.The 2-year-old boy died after being abused by workers', 1)]
+who: [('Cho', 2), ('Park Chang-jin', 1), ('Park Chang-jin , the senior Korean Air crew member in the “ nut rage ” incident ,', 1)]
+why: [('it', 7), ('Lawmakers', 2), ('Chief', 1)]
+how: [("will likely put the country 's leading carrier under another", 1), ('the senior Korean Air crew member in the “ nut', 1), ('not accountable for child ’s death after day care abuse', 1)]
+Headline: Umbrella union set to launch general strike in April
+when: Wednesday
+where: Seoul
+what: will launch a general strike
+who: union
+why: it
+how: launch general strike in April .
+===Quarter 2===
+===Category 2===
+when: [('Tuesday', 11), ('Monday', 8), ('Wednesday', 8)]
+where: [('unknown', 15), ('South Korea', 8), ('Seoul', 5)]
+what: [('are pending in th', 1), ('have yet to decide their recruitment plan , 64.7 percent', 1), ('warns of strike', 1)]
+who: [('Parliament', 2), ('Park', 2), ('Two cases', 1)]
+why: [('it', 9), ('they', 3), ('Park', 3)]
+how: [('of pro-Japanese traitors is nearing an end after years of', 1), ('firms undecided on employment plan : survey .', 1), ('to lower pensions for civil servants , including public school', 1)]
+Headline: Park calls for compromise on labor, pension reforms
+when: Tuesday
+where: South Korea
+what: calls for compromise
+who: Park
+why: Park
+how: 's civil service pensions and rigid labor market .
+===Quarter 3===
+===Category 2===
+when: [('Wednesday', 5), ('Tuesday', 5), ('Thursday', 4)]
+where: [('unknown', 8), ('South Korea', 5), ('Seoul', 4)]
+what: [('violated a law', 1), ('failed to narrow their differences', 1), ('continued to hold down the drawn-ou', 1)]
+who: [('The government', 3), ('South Korea', 2), ('Airport.Cho', 1)]
+why: [('He', 2), ('it', 2), ('crewmembers', 1)]
+how: [(', former vice president of Korean Air , asked an', 1), ('underperforming regular workers .', 1), ('’s public service pension persisted Wednesday among the main political', 1)]
+Headline: Rift prevents closure on ferry disaster
+when: Tuesday
+where: South Korea
+what: is far from putting one
+who: South Korea
+why: she
+how: on key issues.In spite of the negotiations , rallies and
+===Quarter 4===
+===Category 2===
+when: [('Wednesday', 9), ('Friday', 7), ('Monday', 7)]
+where: [('unknown', 12), ('South Korea', 11), ('Seoul', 4)]
+what: [('agrees on pension bill', 1), ("vows to block pension bill 's", 1), ('came at a meeting', 1)]
+who: [('S. Korea', 3), ('Parties', 2), ('NPAD', 2)]
+why: [('it', 5), ('S. Korea', 4), ('they', 3)]
+how: [('of civil servants holds a rally against the pension reform', 1), ('Unionized public workers and teachers vowed Saturday to fight vigorously', 1), ('require public ... .', 1)]
+Headline: Presidential office blames parties for failed pension bill
+when: Wednesday
+where: South Korea
+what: blames parties for failed pension bill
+who: Presidential office
+why: they
+how: for national pension subscribers from a public servants ’ pension

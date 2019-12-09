@@ -126,3 +126,55 @@ what: [('engages in phone diplomacy', 1), ('to hold talks', 1), ('will hold a me
 who: [('Hwang', 2), ('ministry', 2), ('Iraq', 1)]
 why: [('Korea', 2), ('he', 1), ('Iraq', 1)]
 how: [(', particularly in the infrastructure development , as he strove', 1), ('Foreign ministers of Korea , Iraq to hold talks in', 1), ("hold overseas missions ' meeting this week .", 1)]
+===Category 4===
+when: [('Monday', 99), ('Friday', 91), ('Tuesday', 89)]
+where: [('unknown', 173), ('Seoul', 167), ('South Korea', 161)]
+what: [('declares presidential bid', 2), ('publishes book on policy pledges', 2), ('took to the streets Saturday', 2)]
+who: [('Park', 36), ('Court', 27), ('Moon', 26)]
+why: [('he', 49), ('Park', 45), ('it', 42)]
+how: [('announces presidential bid .', 3), ('for presidential bid .', 2), (', former head of the main opposition Democratic Party ,', 2)]
+===Quarter 9===
+===Category 2===
+when: [('Tuesday', 13), ('Friday', 13), ('Monday', 10)]
+where: [('US', 18), ('Seoul', 11), ('N. Korea', 9)]
+what: [("discusses media 's", 1), ('will have talks', 1), ('agrees to quickly ratify extradition treaty', 1)]
+who: [('South Korean President Moon Jae-in', 9), ('President Moon Jae-in', 5), ('Moon', 5)]
+why: [('he', 10), ('Moon', 4), ('South Korean President Moon Jae-in', 3)]
+how: [('South Korean President Moon Jae-in said Wednesday that his special', 2), ('and regional conflicts.The event , hosted by the Journalists Association', 1), ('Top diplomats of Korea and Angola to meet next week', 1)]
+===Category 4===
+when: [('Monday', 69), ('Tuesday', 62), ('Wednesday', 55)]
+where: [('Seoul', 153), ('unknown', 110), ('South Korea', 61)]
+what: [('is publishing a series', 5), ('agreed Monday', 3), ('questioned in jail again over corruption scandal', 2)]
+who: [('Moon', 25), ('President Moon Jae-in', 25), ('Park', 15)]
+why: [('he', 30), ('it', 17), ('they', 16)]
+how: [("a violent street rally against the Constitutional Court 's decision", 2), ('in presidential election .', 2), ('the main enemy ” on live TV , leading presidential', 2)]
+===Quarter 10===
+===Category 2===
+when: [('Wednesday', 22), ('Tuesday', 19), ('Friday', 13)]
+where: [('North Korea', 25), ('N. Korea', 13), ('Russia', 9)]
+what: [("'s seeking closer ties", 2), ('agreed Monday', 2), ('are renegotiating a trade deal', 1)]
+who: [('Moon', 12), ('South Korean President Moon Jae-in', 9), ('President Moon Jae-in', 9)]
+why: [('he', 11), ('Korea', 6), ('South Korean President Moon Jae-in', 5)]
+how: [("'s parliamentary speaker .", 2), ('the one-on-one summit , which began at 10:15 a.m. loca', 1), ('enhanced trilateral cooperation with Japan .', 1)]
+===Category 4===
+when: [('Monday', 49), ('Thursday', 47), ('Wednesday', 36)]
+where: [('Seoul', 84), ('unknown', 69), ('South Korea', 35)]
+what: [('adopts hearing report', 2), ('appoints new head', 2), ('issued a warrant', 2)]
+who: [("Moon 's approval rating", 15), ('President Moon Jae-in', 14), ('Parliament', 5)]
+why: [('it', 22), ('he', 13), ('they', 12)]
+how: [('to former President Park Geun-hye ’s ouster .', 2), ("a fraudulent allegation about President Moon Jae-in 's son during", 1), ('Former presidential candidate faces party probe over fake tip-off against', 1)]
+===Quarter 11===
+===Category 2===
+when: [('Wednesday', 24), ('Tuesday', 23), ('Thursday', 14)]
+where: [('US', 15), ('South Korea', 15), ('China', 14)]
+what: [('agreed Thursday', 2), ('begins 4-day state visit', 2), ('has confirmed', 1)]
+who: [('South Korean President Moon Jae-in', 11), ('President Moon Jae-in', 7), ('North Korea', 6)]
+why: [('Moon', 10), ('he', 7), ('it', 6)]
+how: [('South Korean President Moon Jae-in called for increased cooperation between', 2), ('-- South Korean President Moon Jae-in was set to attend', 2), ('Uzbek leader begins 4-day state visit .', 2)]
+===Category 4===
+when: [('Wednesday', 45), ('Tuesday', 45), ('Monday', 35)]
+where: [('Seoul', 82), ('unknown', 75), ('NIS', 54)]
+what: [('siphoned off 3 billion won', 2), ('raided the headquarters', 2), ('told reporters', 2)]
+who: [('Court', 12), ('President Moon Jae-in', 9), ('Prosecutors', 8)]
+why: [('Prosecutors', 34), ('he', 24), ('they', 17)]
+how: [('to senior presidential secretary .', 2), ('A parliamentary committee failed Monday to adopt a report on', 2), ('3 former spy chiefs face arrest over alleged illegal payments', 2)]

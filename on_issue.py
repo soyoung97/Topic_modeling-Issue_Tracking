@@ -51,14 +51,20 @@ def split_by_quarter(df):
     return df.groupby(year)
 
 
+def split_by_month(df):
+    month = df['timestamp'].dt.to_period('M')
+    return df.groupby(month)
+
+
 def classify_docs(df, model):
-    quarter_docs = split_by_quarter(df)
+    # quarter_docs = split_by_quarter(df)
+    quarter_docs = split_by_month(df)
     clsfyd = [[pandas.DataFrame() for _ in range(model.num_topics)]
               for _ in quarter_docs]
 
     dictionary = model.id2word
     for q_idx, (_, quarter) in tqdm(enumerate(quarter_docs), total=len(quarter_docs)):
-        for d_idx, row in quarter.iterrows():
+        for _, row in quarter.iterrows():
             body = dictionary.doc2bow(row['tokenized_body'])
             vector = model[body]
             cat = max(vector, key=lambda x: x[1])[0]
@@ -123,10 +129,38 @@ def get_issue_stats(rows, extractor):
     }
 
 
+def get_score(counter, word):
+    if word == 'unknown':
+        return 0
+    elif word in counter:
+        return counter[word]
+    else:
+        return 0
+
+
+def get_top_headline(counter, rows, extractor):
+    max_row = None
+    max_score = 0
+    for row in tqdm(rows.iterrows(), total=rows.shape[0]):
+        res = get_5w1h(row, extractor)
+
+        if not res:
+            continue
+        score = 0
+        for query in res:
+            score += get_score(counter[query], res[query])
+
+        if max_score < score:
+            max_score = score
+            max_row = row
+
+    return max_row[1]['title'], get_5w1h(max_row, extractor)
+
+
 TO_FIND = {
-    0: [2, 9],  # 2015
-    1: [3, 8],  # 2016
-    2: [2, 4]  # 2017
+    0: [2],  # 2015
+    1: [3],  # 2016
+    2: []  # 2017
 }
 
 
@@ -139,19 +173,23 @@ def __main(offset):
         model = get_LDA_model('./saves', int(i.year))
         clsfyd += classify_docs(yeardf, model)
     print(len(clsfyd))
-    resf = open('res_on_issue.txt', 'w')
+    resf = open('res_on_issue_month.txt', 'w')
 
     extractor = MasterExtractor()
     for idx, quarter in enumerate(clsfyd):
         resf.write('===Quarter %d===\n' % idx)
         for cat, docs in enumerate(quarter):
-            if cat in TO_FIND[idx // 4]:
+            if cat in TO_FIND[idx // 12]:
                 res = get_issue_stats(docs, extractor)
 
                 resf.write('===Category %d===\n' % cat)
                 for key in res:
                     resf.write('%s: %s\n' %
                                (key, str(res[key].most_common(3))))
+                top_headline, top_res = get_top_headline(res, docs, extractor)
+                resf.write('Headline: %s\n' % top_headline)
+                for key in top_res:
+                    resf.write('%s: %s\n' % (key, top_res[key]))
                 resf.flush()
     resf.close()
 
