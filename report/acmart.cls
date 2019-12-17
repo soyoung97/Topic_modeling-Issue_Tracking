@@ -1747,18 +1747,10 @@
        \color[gray]{0.9}%
     \fi
     \parindent\z@\parskip0.1\baselineskip
-    \if@ACM@authorversion\else
-      \if@printpermission\@copyrightpermission\par\fi
-    \fi
     \if@ACM@manuscript\else
        \if@ACM@journal@bibstrip\else % Print the conference information
          {\itshape \acmConference@shortname, \acmConference@date, \acmConference@venue}\par
        \fi
-    \fi
-    \if@printcopyright
-      \copyright\ \@copyrightyear\ \@copyrightowner\\
-    \else
-      \@copyrightyear.\
     \fi
     \if@ACM@manuscript
       Manuscript submitted to ACM\\
@@ -1784,9 +1776,6 @@
               \ifx\@acmPrice\@empty\else\ \$\@acmPrice\fi\\
               \@formatdoi{\@acmDOI}%
             \else % Conference
-              \ifx\@acmISBN\@empty\else ACM~ISBN~\@acmISBN
-              \ifx\@acmPrice\@empty.\else\dots\$\@acmPrice\fi\\\fi
-              \ifx\@acmDOI\@empty\else\@formatdoi{\@acmDOI}\fi%
             \fi
           \fi
         \fi
@@ -1814,7 +1803,6 @@
   \global\let\authors=\authors
   \global\let\shortauthors=\shortauthors
   \if@ACM@printacmref
-     \@mkbibcitation
   \fi
   \hypersetup{%
     pdfauthor={\authors},
@@ -2318,7 +2306,6 @@
          \@article@string\unskip, \ref{TotPages}~\@pages@word.
     \fi
   \fi
-  \ifx\@acmDOI\@empty\else\@formatdoi{\@acmDOI}\fi
 \par\egroup}
 \def\@printendtopmatter{\bgroup
   \let\@vspace\@vspace@orig
