@@ -16,19 +16,24 @@ document similarity between reuters dataset and our news dataset.
 To pick most similar topic, we compute maximum similairty within documents
 in topic and minimum similairty bewteen reuters and news dataset. Due to
 largeness of dataset, we choose only subset of dataset to calculate
-minimum/maximum similairty bewteen groups.
+minimum/maximum similairty bewteen groups. Similarity of groups are
+represented as graph in figure \ref{fig:distance}. Distance of nearest
+10 topics in reuters dataset is shown as table \ref{table:topicdistance}.
+Also, there are significant difference of distances between nearest group and
+others, as shown as table \ref{table:groupdistance}.
 
 \subsection{Reuters evaluation}
 With reuters dataset with 10 pre-classified topics, we generate LDA
 model for reuters dataset and make 10 topics. And we classified the topic
 with given label. In result, we successfuly classified 7 topics from
-LDA result. It shows that our LDA model seems to work correctly.
+LDA result. It shows that our LDA model seems to work correctly. Precise
+result is shown as table \ref{table:matchedtopic}.
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.8\linewidth]{Distance1}
-  \caption{A brief diagram of on-issue tracking process.}
-  \label{fig:onissuedia}
+  \caption{Distance between Herald dataset.}
+  \label{fig:distance}
 \end{figure}
 
 \begin{table}[!htbp]
@@ -45,8 +50,8 @@ LDA result. It shows that our LDA model seems to work correctly.
   cocoa & 0.0718 \\
   oilseed & 0.0731
   \end{tabular}
-  \caption{The example of on-issue tracking of the issue MERS.}
-  \label{table:onissue}
+  \caption{Distance of nearest 10 topics between Herald dataset.}
+  \label{table:topicdistance}
 \end{table}
 
 
@@ -56,14 +61,36 @@ LDA result. It shows that our LDA model seems to work correctly.
   nearest 10 topics & 0.061 \\
   other topics & 0.1964
   \end{tabular}
-  \caption{The example of on-issue tracking of the issue MERS.}
-  \label{table:onissue}
+  \caption{Difference between nearest topics and another.}
+  \label{table:groupdistance}
+\end{table}
+
+\begin{table}[!htbp]
+  \begin{tabular}{l|l}
+      Topic & matched label \\ \hline
+      0 & Unknown \\
+      1 & oilseed \\
+      2 & veg-oil \\
+      3 & gold \\
+      4 & Unknown \\
+      5 & Unknown \\
+      6 & lumber \\
+      7 & yen \\
+      8 & oilseed \\
+      9 & cocoa \\
+  \end{tabular}
+  \caption{Matched topic and label.}
+  \label{table:matchedtopic}
 \end{table}
 
 
 
 \subsection{Off-issue tracking}
 
+For off-issue tracking, we just evaluated dunn index of clusters for many epsilon values of DBSCAN algorithm.
+If dunn index is high, then it means cluster has higher distance between cluster, and has lower distance in cluster.
+The result shows that smaller epsilon makes greater dunn index, but number of cluster is decreasing. So,
+we have to decide appropriate epsilon value for better result. Numerical result of calculation is shown as table \ref{table:dunnindex}.
 \begin{table}[!htbp]
   \begin{tabular}{l|l|l|l|l}
   Epsilon   & $\max \Delta_{k}$ & $\min \delta(C_{i}, C_{j})$ & $DI_{m}$ & \# of cluster \\ \hline
@@ -72,6 +99,6 @@ LDA result. It shows that our LDA model seems to work correctly.
   7 &  52.72 & 138.4 & 2.625 & 16  \\
   9 & 106.7 & 102.1 & 0.9564 & 28
   \end{tabular}
-  \caption{The example of on-issue tracking of the issue MERS.}
-  \label{table:onissue}
+  \caption{Dunn index and number of cluster for internal evaluation.}
+  \label{table:dunnindex}
 \end{table}
