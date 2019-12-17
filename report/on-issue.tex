@@ -1,9 +1,9 @@
 \section{On-issue tracking}
 
-For on-issue tracking, we first divide news articles quarterly.
-Then we classify news articles in each quarter group into 20 issue categories.
+For on-issue tracking, we first divide news articles monthly.
+Then we classify news articles in each month group into 10 issue categories.
 For each classified group, each article’s 5W1H(when, where, who, what, why, how) is extracted and counted.
-The most frequent 5W1H will represent an on-issue event for the quarter.
+The frequencies are used to extract the most relevant news title for each month.
 
 Figure \ref{fig:onissuedia} shows the structure of the on-issue tracking process.
 
@@ -14,25 +14,27 @@ Figure \ref{fig:onissuedia} shows the structure of the on-issue tracking process
   \label{fig:onissuedia}
 \end{figure}
 
-\subsection{Quarterly Division}
+\subsection{Monthly Division}
 
-We divided all news articles quarterly.
-The groups contain news articles those are written in \textit{2015 Q1, 2015 Q2, …, 2017 Q4, 2018 Q1}.
-\textit{2018 Q1} group contains only articles written in January, 2018,
-so we merge the last group with the group \textit{2017 Q4}.
-The reason why we divided the data quarterly is, the quarter is a semi-standard in the field of yearly statistics.
-If we divide yearly, there will be only three groups
-and it will not have high accuracy if we make a timeline of the events.
-So we chose a quarterly division to make reasonable results.
+We divided all news articles monthly.
+The groups contain news articles those are written in \textit{January 2015, Febuary 2015, \dots, December 2017, January 2018}.
+\textit{2018 Jan.} group contains only a few articles,
+so we decided to ignore the last group.
+The reason why we divided the data monthly is, the month is one of the standard in the field of yearly statistics analysis.
+For example, the issue about MERS started from May 2015, and ended in January 2016.
+If we divide yearly, there will be only one or two groups for extracting events.
+Else if we divide quarterly, there will be three or four events.
+We can extract eight or nine events from the period if we divide the events mothly,
+so this is just fit to make a reasonable result.
 
-\subsection{Articles in the Quarters Categorization}
+\subsection{Articles in the Months Categorization}
 
 With LDA model we have trained at trend analysis project,
-we classify the documents in the quarter groups.
+we classify the documents in the month groups.
 If we give a tokenized sentence to the LDA model,
 the model outputs the probability for each group.
 We choose the group with maximum value, and assign the document to the group.
-So, for each quarter, there are 21 classified groups of news articles.
+So, for each month, there are 21 classified groups of news articles.
 
 \subsection{Event Extraction}
 
@@ -51,8 +53,8 @@ and select the most frequent terms for each feature, treat them as an event.
 
 In details, to reduce the time of event extraction,
 we choose two yearly issues from the list, and do event extraction for each issue.
-So each yearly issue has four event extraction result: in Q1, Q2, Q3, and Q4.
-For each quarter result, we identify an event based on the result and align them on the timeline.
+So each yearly issue has twelve event extraction result: January, Febuary, \dots, and December.
+For each month result, we identify an event based on the result and align them on the timeline.
 
 Table ? is an on-issue tracking of the issue MERS.
 The events timeline of the issue MERS in 2015 is: 

@@ -73,3 +73,300 @@ what: blames parties for failed pension bill
 who: Presidential office
 why: they
 how: for national pension subscribers from a public servants ’ pension
+===Quarter 5===
+===Category 2===
+when: [('Monday', 28), ('Wednesday', 26), ('Tuesday', 24)]
+where: [('South Korea', 42), ('Middle East', 40), ('Seoul', 37)]
+what: [('announced Sunday', 2), ('reports two more MERS deaths', 2), ('being 53.8', 2)]
+who: [('S. Korea', 28), ('Seoul', 8), ('South Korea', 8)]
+why: [('S. Korea', 25), ('it', 16), ('they', 8)]
+how: [('Average age of recovered MERS patients 53.8 .', 2), ('Korean MERS suspect monitored in Slovakia .', 2), ('so far been hit the hardest by Middle East respiratory', 2)]
+Headline: S. Korea confirms 3 more MERS cases, total rises to 18
+when: Monday
+where: Middle East
+what: confirms 3 more MERS cases
+who: S. Korea
+why: S. Korea
+how: East Respiratory Syndrome Monday , bringing the total number of
+===Quarter 6===
+===Category 2===
+when: [('Monday', 12), ('Wednesday', 11), ('Tuesday', 10)]
+where: [('S. Korea', 27), ('unknown', 11), ('Korea', 11)]
+what: [('reports no new MERS cases', 7), ('reports additional case', 2), ('has seen no new cases', 2)]
+who: [('S. Korea', 16), ('Korea', 6), ('South Korea', 5)]
+why: [('S. Korea', 20), ('Korea', 6), ('it', 5)]
+how: [('an additional case of Middle East Respiratory Syndrome Friday ,', 2), ('no additional MERS cases for 21st day .', 2), ('no additional cases of MERS for fourth straight day .', 1)]
+Headline: S. Korea reports no new MERS cases for 17th day
+when: Wednesday
+where: S. Korea
+what: reports no new MERS cases
+who: S. Korea
+why: S. Korea
+how: no new MERS cases for 17th day .
+===Quarter 7===
+===Category 2===
+when: [('Monday', 7), ('Tuesday', 5), ('Wednesday', 5)]
+where: [('South Korea', 11), ('S. Korea', 4), ('Korea', 4)]
+what: [('stood at 36 for the 21st consecutive day , according to the Ministry', 1), ('is moving to designate the day', 1), ('is paid the legal minimum wage', 1)]
+who: [('The government', 2), ('Park', 2), ('South Korea', 2)]
+why: [('Park', 3), ('The number of people diagnosed with Middle East Respiratory Syndrome ( MERS ) in South Korea', 2), ('they', 2)]
+how: [("'s new pick for health minister.Chung Chin-youb , a professor", 2), ('East Respiratory Syndrome ( MERS ) in South Korea continued', 1), ('t likely to designate temporary holiday for liberation celebrations .', 1)]
+Headline: Park gives appointment letter to new health minister
+when: Monday
+where: South Korea
+what: gives appointment letter
+who: Park
+why: Park
+how: to new health minister .
+===Quarter 8===
+===Category 2===
+when: [('Wednesday', 10), ('Tuesday', 8), ('Monday', 6)]
+where: [('unknown', 18), ('South Korea', 13), ('Seoul', 11)]
+what: [('vowed Friday', 2), ('announces post-MERS plan', 1), ('plans to renovate and expand the size', 1)]
+who: [('Park', 3), ('Moon', 3), ('The government', 2)]
+why: [('he', 4), ('Park', 3), ('lawmakers', 3)]
+how: [('the full-year death toll expected to surpass that of last', 2), ('All general hospitals with 300 or more patient beds in', 1), ('in post-MERS improvements .', 1)]
+Headline: Moon stakes leadership on party reform
+when: Wednesday
+where: Seoul
+what: would leave his post
+who: leader
+why: he
+how: Moon Jae-in proposed a vote of confidence in his leadership
+===Quarter 9===
+===Category 2===
+when: [('Thursday', 4), ('Sunday', 4), ('Friday', 2)]
+where: [('South Korea', 5), ('Korea', 4), ('Middle East', 3)]
+what: [('plans to dismiss underperforming public officials', 1), ('apply for compensation', 1), ('can be made on Oct. 29 , 28 days', 1)]
+who: [('Seoul', 2), ('The government', 1), ('Sewol victims', 1)]
+why: [('it', 2), ('there', 2), ('because of the solid job security found there.Public servant ... .', 1)]
+how: [('underperforming public officials .', 1), ('Roughly 75 percent of victims and survivors in last year', 1), ('s last MERS patient tests negative .', 1)]
+Headline: 61 isolated after last MERS patient rediagnosed
+when: Sunday
+where: South Korea
+what: rediagnosed
+who: last MERS patient
+why: Japanese tourists
+how: after last MERS patient rediagnosed .
+===Quarter 10===
+===Category 2===
+when: [('Monday', 7), ('Saturday', 5), ('Sunday', 4)]
+where: [('Seoul', 9), ('South Korea', 6), ('unknown', 5)]
+what: [('dies', 2), ('has ruled in favor', 1), ('are currently being treated or monitored for possible infection after an outbreak', 1)]
+who: [('Korea', 2), ('Ahn', 2), ('A court', 1)]
+why: [('it', 4), ('they', 2), ('Korea', 2)]
+how: [("of unfaithful spouse 's divorce suit .", 1), ('is still unknown.Among the 44 individuals , 41 currently have', 1), ('the main opposition New Politics Alliance for Democracy boycotted parliamentary', 1)]
+Headline: Rival parties split over violence at protest rally
+when: Monday
+where: Seoul
+what: showed mixed reactions
+who: South Korea 's ruling and opposition parties
+why: because it violates the citizens ' right to freedom of movement .
+how: " illegal political rally ... .
+===Quarter 11===
+===Category 2===
+when: [('Thursday', 12), ('Wednesday', 11), ('Tuesday', 9)]
+where: [('South Korea', 17), ('unknown', 16), ('Seoul', 16)]
+what: [('announced Thursday', 2), ('rejected demands by dissenting party members', 2), ('lowers MERS', 1)]
+who: [('Korea', 5), ('the government', 4), ('Ahn', 4)]
+why: [('it', 6), ('Korea', 5), ('he', 5)]
+how: [('create free medical school .', 2), ('MERS alert to lowest readiness level .', 1), ('Political parties discuss 2016 budget to meet legal deadline .', 1)]
+Headline: Police to ban another massive rally
+when: Thursday
+where: Seoul
+what: have decided to prohibit civic groups
+who: police
+why: it
+how: 's violent protest .
+===Quarter 12===
+===Category 3===
+when: [('Friday', 3), ('Tuesday', 1), ('December', 1)]
+where: [('South Korea', 3), ('Seoul', 3), ('unknown', 1)]
+what: [('sought a one-year jail term', 1), ('gets 16-month jail term', 1), ('will be banned for half', 1)]
+who: [('Prosecutors on Tuesday', 1), ('Lawmaker', 1), ('Lim Chang-yong and Oh Seung-hwan , both currently free agents ,', 1)]
+why: [('Prosecutors on Tuesday', 1), ('A sitting lawmaker , formerly affiliated with the main opposition party ,', 1), ('because " there is a possibility " that he may return to South Korea someday.The KBO teams will each play 144 games in 2016 .', 1)]
+how: [('a former South Korean prime minister on charges of receiving', 1), ('receiving illegal political .', 1), ('Two South Korean baseball pitchers facing illegal gambling charges were', 1)]
+Headline: Lawmaker gets 16-month jail term for receiving illegal political
+when: Friday
+where: South Korea
+what: gets 16-month jail term
+who: Lawmaker
+why: A sitting lawmaker , formerly affiliated with the main opposition party ,
+how: receiving illegal political .
+===Quarter 13===
+===Category 3===
+when: [('Thursday', 2), ('Tuesday', 2), ('Wednesday', 2)]
+where: [('North Korea', 2), ('United States', 1), ('unknown', 1)]
+what: [('has offered to resign', 1), ('was sentenced to eight months with probation on charges', 1), ('filed an appeal', 1)]
+who: [('Park', 2), ('The president of state-run English language broadcaster Arirang TV', 1), ('Late last month', 1)]
+why: [('Park', 2), ('Bang', 1), ('the 66-year-old', 1)]
+how: [('of state-run English language broadcaster Arirang TV has offered to', 1), ('Former Prime Minister Lee Wan-koo , who was found guilty', 1), ("'s former Prime Minister Lee Wan-koo filed an appeal against", 1)]
+Headline: Park fills spy agency’s key posts with North Korea experts
+when: Tuesday
+where: North Korea
+what: fills spy agency ’s
+who: Park
+why: Park
+how: , former prosecutor and military official respectively , the presidential
+===Quarter 14===
+===Category 3===
+when: [('Wednesday', 1), ('Thursday', 1), ('the day', 1)]
+where: [('South Korea', 2), ('Jeju', 1)]
+what: [('have arrested a board member', 1), ('will resign from his post.The 61-year-old a. ... The head', 1), ('ruled Wednesday -- the chief presidential secretariat', 1)]
+who: [('Prosecutors', 1), ('KSF', 1), ('A local court', 1)]
+why: [('they', 1), ('because of schedule conflicts with other executives , the KSF official said that Lee wanted to see a new person taking his job by March 25 , when the second round national team selection qualification for the Rio de Janeiro Summer Games starts.The KSF is under fire after many of their executives have been arrested or investigated by Seoul prosecutors in recent weeks on alleged charges of bribery , embezzlement and fraud in national team member selection.Lee , who has been the KSF president since 2010 , has been one of the more active sports figures in South Korea .', 1), ('reports', 1)]
+how: [('of national swimming body arrested over alleged embezzlement .', 1), ('Korean swimming body chief to resign amid corruption scandal .', 1), ('three presidential officials -- the chief presidential secretariat , the', 1)]
+Headline: Executive of national swimming body arrested over alleged embezzlement
+when: Wednesday
+where: South Korea
+what: have arrested a board member
+who: Prosecutors
+why: they
+how: of national swimming body arrested over alleged embezzlement .
+===Quarter 15===
+===Category 3===
+when: [('Tuesday', 2), ('Thursday', 1), ('August 2015', 1)]
+where: [('South Korea', 2), ('unknown', 2), ('Seoul', 1)]
+what: [('are considerable reasons to believe he', 1), ('indicted over alleged illegal rallies', 1), ('upholds 16-month jail term', 1)]
+who: [('he', 1), ('Ex-chief of umbrella labor union', 1), ('Court', 1)]
+why: [('Former KORAIL chief', 1), ("Tuesday they have indicted a former chief of South Korea 's second-largest umbrella labor group on charges of holding unauthorized rallies.The Seoul Central District Prosecutors ' Office", 1), ('An appeals court', 1)]
+how: [('Former KORAIL chief arrested over corruption in urban development project', 1), ('alleged illegal rallies .', 1), ('a lower court on a lawmaker , formerly affiliated with', 1)]
+Headline: Ex-chief of umbrella labor union indicted over alleged illegal rallies
+when: Tuesday
+where: South Korea
+what: indicted over alleged illegal rallies
+who: Ex-chief of umbrella labor union
+why: Tuesday they have indicted a former chief of South Korea 's second-largest umbrella labor group on charges of holding unauthorized rallies.The Seoul Central District Prosecutors ' Office
+how: alleged illegal rallies .
+===Quarter 16===
+===Category 3===
+when: [('Friday', 2), ('Wednesday', 1), ('Monday', 1)]
+where: [('Yeouido , Seoul', 1), ('Washington', 1), ('Hong', 1)]
+what: [('sold their company stocks', 1), ('expires', 1), ('indicted and arrested the former official', 1)]
+who: [('chairwoman', 1), ('Statute of limitations for ex-presidential spokesman', 1), ('investigators', 1)]
+why: [('Prosecutors', 1), ('year.Yoon', 1), ('Korean prosecutors on Tuesday', 1)]
+how: [(', former chairwoman of Hanjin Shipping Co. , on suspicion', 1), ('misdemeanor sexual abuse allegation against former South Korean presidential spokesman', 1), ('indicts retired Army brigadier general in corruption case .', 1)]
+Headline: Former senior prosecutor summoned over lobbying scandal
+when: Friday
+where: Seoul
+what: illegally peddled his influence and evaded taxes
+who: charges.Before
+why: because he has to work very long hours as a lawyer.Hong was a prominent prosecutor until he stepped down from office in 2011 , investigating major corruption cases that involved the country 's former presidents .
+how: Former senior prosecutor summoned over lobbying scandal .
+===Quarter 17===
+===Category 3===
+when: [('Thursday', 4), ('Friday', 3), ('Monday', 2)]
+where: [('unknown', 4), ('Lotte', 2), ('U.S.', 2)]
+what: [('arrested a prosecutor-turned-lawyer accused of peddling influence and evading taxes , as part into the snowballing corruption scandal', 1), ('raided over lobbying scandal', 1), ('arrested over alleged bribery', 1)]
+who: [('State prosecutors on Thursday', 1), ('Hotel Lotte', 1), ('GM Korea execs', 1)]
+why: [('Former senior prosecutor', 2), ('he', 2), ('Hotel Lotte', 1)]
+how: [('Former senior prosecutor arrested for lobbying scandal .', 1), ("'s legal establishment.The Seoul Central District Prosecutors", 1), ('over alleged bribery .', 1)]
+Headline: Former senior prosecutor arrested for lobbying scandal
+when: Thursday
+where: Seoul
+what: arrested a prosecutor-turned-lawyer accused of peddling influence and evading taxes , as part into the snowballing corruption scandal
+who: State prosecutors on Thursday
+why: Former senior prosecutor
+how: Former senior prosecutor arrested for lobbying scandal .
+===Quarter 18===
+===Category 3===
+when: [('Tuesday', 3), ('April', 1), ('Wednesday', 1)]
+where: [('Seoul', 3), ('unknown', 2), ('North Korea', 1)]
+what: [('have indicted nine people , including a lieutenant colonel', 1), ('has designated Lee Keum-ro', 1), ('will replace Bae Jung-ho', 1)]
+who: [('Park', 2), ('Prosecutors', 1), ("the country 's top prosecutor Kim Soo-nam", 1)]
+why: [('Park', 3), ('he', 2), ('they', 1)]
+how: [('a former executive of a local defense firm , identified', 1), ('investigate senior prosecutor over suspicious stock purchase .', 1), ("retired general as head of presidential advisory panel 's secretariat", 1)]
+Headline: CJ Group chief undergoes surgery to remove lung tumor
+when: Tuesday
+where: Seoul
+what: undergoes surgery
+who: CJ Group chief
+why: the official
+how: 's largest food and entertainment conglomerates , has undergone surgery
+===Quarter 19===
+===Category 3===
+when: [('Thursday', 7), ('Monday', 4), ('Friday', 3)]
+where: [('Seoul', 8), ('unknown', 7), ('Korea', 2)]
+what: [('summoned a ruling party lawmaker', 1), ("embezzled orchestra 's", 1), ('summoned Lee Chang-suk', 1)]
+who: [('Special inspector', 2), ('Prosecutors on Thursday', 1), ('Myung-whun', 1)]
+why: [('Park', 2), ('Special inspector', 2), ('Prosecutors on Thursday', 1)]
+how: [('over illegal political funds .', 1), ('Police clear Maestro Chung of embezzlement allegations .', 1), ('the South Korean baseball club Nexen Heroes for his alleged', 1)]
+Headline: Police clear Maestro Chung of embezzlement allegations
+when: Thursday
+where: Seoul
+what: embezzled orchestra 's
+who: Myung-whun
+why: Police on Thursday
+how: Police clear Maestro Chung of embezzlement allegations .
+===Quarter 20===
+===Category 3===
+when: [('Thursday', 2), ('Friday', 2), ('Sept. 3', 1)]
+where: [('Lotte', 2), ('Seoul', 2), ('Korea', 2)]
+what: [('receives surprise gift', 1), ('visit Lotte founder to check his health', 1), ('will carry out the questioning', 1)]
+who: [('Cheong Wa Dae', 2), ('Park', 1), ('Prosecutors', 1)]
+why: [('Park', 2), ('he', 2), ('Cheong Wa Dae', 2)]
+how: [('her late father and former President Park Chung-hee after a', 1), ('a combined 6.2-percent stake in Lotte Holdings , held in', 1), ('office later in the day over a string of corruption', 1)]
+Headline: Cheong Wa Dae denies claims of top aide's illicit fundraising
+when: Thursday
+where: Korea
+what: denies claims of top aide 's illicit fundraising
+who: Cheong Wa Dae
+why: Cheong Wa Dae
+how: the senior presidential secretary for policy coordination , who has
+===Quarter 21===
+===Category 3===
+when: [('Sunday', 5), ('Wednesday', 4), ('Friday', 4)]
+where: [('Seoul', 9), ('unknown', 6), ('Mir', 4)]
+what: [("dismissed an opposition politician 's", 1), ('is being thrust into the center', 1), ('questioned current and former officials', 1)]
+who: [('Choi', 8), ('Park', 5), ('State prosecutors', 2)]
+why: [('Choi', 6), ('Prosecutors', 5), ('Park', 5)]
+how: [("Presidential office dismisses claim over Park 's retirement residence .", 1), ('in political scandal .', 1), ('summon former , current employees of scandal-ridden foundations .', 1)]
+Headline: Choi faces probe over influence-peddling scandal
+when: Sunday
+where: Seoul
+what: faces probe over influence-peddling scandal
+who: Choi
+why: Choi
+how: her alleged influence peddling .
+===Quarter 22===
+===Category 3===
+when: [('Friday', 15), ('Tuesday', 14), ('Wednesday', 14)]
+where: [('Seoul', 37), ('unknown', 24), ('South Korea', 13)]
+what: [("wo n't attend APEC summit", 2), ('was implicated as an accomplice', 2), ("'d returned from Eur", 1)]
+who: [('Park', 13), ('President Park Geun-hye', 6), ('Presidential office', 5)]
+why: [('Prosecutors', 11), ('Park', 11), ('she', 5)]
+how: [(', presidential secretary offer to resign .', 3), ('to formally arrest the 60-year-old , who appeared for questioning', 1), ("Presidential office calls for ' calm ' amid snowballing scandal", 1)]
+Headline: Presidential office says Park will follow whatever decision parliament makes on her fate
+when: Tuesday
+where: Seoul
+what: will follow whatever decision parliament makes on her fate
+who: Park
+why: Park
+how: Presidential office says Park will follow whatever decision parliament makes
+===Quarter 23===
+===Category 3===
+when: [('Wednesday', 19), ('Thursday', 16), ('Friday', 15)]
+where: [('Seoul', 32), ('South Korea', 28), ('unknown', 25)]
+what: [('will soon initiate the process', 2), ('received no medical treatment', 1), ('conferred a certificate', 1)]
+who: [('Park', 8), ('Parliament', 6), ('Choi Soon-sil', 4)]
+why: [('Park', 10), ('it', 10), ('she', 7)]
+how: [('question key figures in scandal at detention center .', 2), ('Ex-presidential nurse says Park received no medical treatment on day', 1), ('the independent counsel that will lead a probe into an', 1)]
+Headline: Park Geun-hye impeachment explained
+when: Friday
+where: South Korea
+what: should be removed from or remain in office
+who: Park
+why: Park
+how: Park Geun-hye impeachment explained .
+===Quarter 24===
+===Quarter 25===
+===Quarter 26===
+===Quarter 27===
+===Quarter 28===
+===Quarter 29===
+===Quarter 30===
+===Quarter 31===
+===Quarter 32===
+===Quarter 33===
+===Quarter 34===
+===Quarter 35===
