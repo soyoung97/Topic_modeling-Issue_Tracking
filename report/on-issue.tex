@@ -40,7 +40,7 @@ So, for each month, there are 21 classified groups of news articles.
 
 For each group we divided from above,
 we extract the events with the approach of word frequency.
-For this step, we use a Python library called ``giveme5W1H''.
+For this step, we use a Python library called ``giveme5W1H''\cite{Hamborg2019b}.
 The library is the state-of-the-art tool for extracting
 \textit{when/where/who/what/why/how} features from the document.
 The library uses Stanford's CoreNLP library as its basic structure,
@@ -49,19 +49,29 @@ title, lead, text, and a published date.
 We decided to use columns \textit{title}, \textit{description}, \textit{body}, and a \textit{time}
 from the given dataset as an input to get a result.
 For each group, we count the frequencies of each feature of the articles,
-and select the most frequent terms for each feature, treat them as an event.
+and select the most frequent terms for each feature, treat them as a score.
+Then we extract a most relevant article from the monthly group;
+For example, if the term `president' occurs twelve times and
+`government' occurs six times as \textit{Who} feature,
+the news article contains the term `president' as \textit{Who}
+takes double scores than the the article about `government'.
+The maximum score article's headline is assumed that it is
+representing the main event of the month.
 
-In details, to reduce the time of event extraction,
-we choose two yearly issues from the list, and do event extraction for each issue.
-So each yearly issue has twelve event extraction result: January, Febuary, \dots, and December.
+We choose two yearly issues from the list, and do event extraction for each issue.
 For each month result, we identify an event based on the result and align them on the timeline.
 
-Table ? is an on-issue tracking of the issue MERS.
-The events timeline of the issue MERS in 2015 is: 
-\textbf{
-Korean aid worker sent(Q1) ->
-Korean government's MERS announcing ->
-Korean government reports no additional MERS cases ->
-Government created free medical school
-}.
+Table \ref{table:onissue} is an example of on-issue tracking of the issue MERS.
 
+\begin{table}[!htbp]
+  \begin{tabular}{l|l}
+  Month   & Event(headline)                                        \\ \hline
+  2015.06 & S. Korea confirms 3 more MERS cases, total rises to 18 \\
+  2015.07 & S. Korea reports no new MERS cases for 17th day        \\
+  2015.08 & Park gives appointment letter to new health minister   \\
+  2015.09 & Moon stakes leadership on party reform                 \\
+  2015.10 & 61 isolated after last MERS patient rediagnosed       
+  \end{tabular}
+  \caption{The example of on-issue tracking of the issue MERS.}
+  \label{table:onissue}
+\end{table}
