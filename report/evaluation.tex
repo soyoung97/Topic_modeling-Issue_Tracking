@@ -5,18 +5,18 @@ To evaluate our result, we first try to show that our trend analysis
 works well. To do that, we collect other document with topic label.
 With these test set, its trend analysis result indirectly shows our
 accuracy of trend analysis.
-\subsection{Selecing test set}
+\subsection{Selecting test set}
 We use reuters data set. It consists of more than 9000 documents
-with more than 70 topics. But, the similairty of document is important
-because evaluation on very diffrent set of doucments dosen't imply
+with more than 70 topics. But, the similarity of document is important
+because evaluation on very diffrent set of documents doesn't imply
 any meaningful result. To resolve that, we decided to extract 10 topics
-with most similairty between our dataset. It is achived by calculating
+with most similarity between our dataset. It is achieved by calculating
 document similarity between reuters dataset and our news dataset.
 
-To pick most similar topic, we compute maximum similairty within documents
-in topic and minimum similairty bewteen reuters and news dataset. Due to
+To pick most similar topic, we compute maximum similarity within documents
+in topic and minimum similarity between reuters and news dataset. Due to
 largeness of dataset, we choose only subset of dataset to calculate
-minimum/maximum similairty bewteen groups. Similarity of groups are
+minimum/maximum similarity bewteen groups. Similarity of groups are
 represented as graph in figure \ref{fig:distance}. Distance of nearest
 10 topics in reuters dataset is shown as table \ref{table:topicdistance}.
 Also, there are significant difference of distances between nearest group and
@@ -25,7 +25,7 @@ others, as shown as table \ref{table:groupdistance}.
 \subsection{Reuters evaluation}
 With reuters dataset with 10 pre-classified topics, we generate LDA
 model for reuters dataset and make 10 topics. And we classified the topic
-with given label. In result, we successfuly classified 7 topics from
+with given label. In result, we successfully classified 7 topics from
 LDA result. It shows that our LDA model seems to work correctly. Precise
 result is shown as table \ref{table:matchedtopic}.
 

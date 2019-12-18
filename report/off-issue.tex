@@ -9,7 +9,7 @@ and the set of document of topic $a$ as $\mathbb{T}_{a} \in \mathcal{P}(\mathbb{
     \caption{Overview of off-issue tracking process.}
 \end{figure*}
 
-\subsection{BoW extractuion}
+\subsection{BoW extraction}
 In first, we have to extract document in some space which we can analyze quantatively.
 We use BoW as morphism from document space to vector space $\mathbb{R}^{N}$, which we can
 analyze similarity of document. In addition, we add one more dimension to give information
@@ -30,7 +30,7 @@ model of language interpretation in metric space. But we can assume \textit{such
 $\phi: \mathbb{D} \rightarrow \mathbb{D}^{\#}$, when $(D^{\#}, d^{\#})$ is metric space. It is not hard to assume this structure,
 since similar concept is already introduced as Entity comparison/Behavior comparison operator of Semantic algebra \cite{wang2013semantic}.
 
-Our desired result is that $b$ with euclidean distance successfuly models $(D^{\#}, d^{\#})$, but we cannot show it because we do not have
+Our desired result is that $b$ with euclidean distance successfully models $(D^{\#}, d^{\#})$, but we cannot show it because we do not have
 constructive definition of $D^{\#}$. But if it has sufficient approximation, (bounded approximation)
 We can derive more interesting properties (such as bounded error from BoW to Event space, etc).
 
@@ -56,7 +56,7 @@ begin with this fact, we can find very interesting property which generalize thi
 \end{definition}
 
 We can check that if $e$ is Lipschitz continuous with $K_{e}$, then above two property is satisfied. Also, it derives important fact:
-If we have approximation of semantics with bounded error, then there also exists approximation of event with bounded error.
+If we have an approximation of semantics with bounded error, then there also exists approximation of event with bounded error.
 \begin{theorem}
     $b$ has approximation of $\phi$ with bound $K, \epsilon$, then there exists $\pi_{e}: \mathbb{R}^{n+1} \rightarrow E^{\#}$ s.t.
     $e^{\#}(\pi_{e}(b(d)), e(\phi(d))) \leq K_{e} \cdot \epsilon$. (it means $b$ has approximation of $e \cdot \phi$ with bound $K, K_{e} \cdot \epsilon$)
@@ -109,7 +109,7 @@ Then, we can partition documents with this equivalence relation.
 \end{definition}
 
 By substitute $\mathbb{D}$ to $\mathbb{T}_{a}$, finally we have $\mathbb{T}_{a}/\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ as successful approximation 
-of event partition of topic $a$. Now, we are going to explain how most relevent description of event is extracted from each partiton.
+of event partition of topic $a$. Now, we are going to explain how most relevant description of event is extracted from each partition.
 
 \subsection{Extracting representative description}
 
@@ -118,12 +118,12 @@ return summary of events, because whole collection of documents are quite long t
 unnecessary information. So we have to extract \textit{representative description} of tht event cluster.
 To extract target information from a document is well studied in information extraction field,
 and there are several method such as template-based information extraction, neural methods, etc.
-But in the case of several docuemnts, it is hard to converge summary to cover all document's information,
+But in the case of several documents, it is hard to converge summary to cover all document's information,
 because existing works is not based on language semantic-based, so it is hard to generate summary statement
-bewtween description of similar/same meaning. 
+between description of similar/same meaning. 
 
-For example, if one document describe the event happens "one day after of 12/7", and there are another
-document describe the event was happend "one day before of 12/9". Obviously both description
+For example, if one document describes the event happens "one day after of 12/7", and there are another
+document describe the event was happened "one day before of 12/9". Obviously, both description
 refer same day, but token-based approach (or pattern-based approach such as signal words) cannot
 handle this issue. Even with this disadvantage, above method is widely used because of
 its high performance (and due to challenges of semantic based information extraction method).
