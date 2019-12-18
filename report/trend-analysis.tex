@@ -10,7 +10,7 @@ In order to load the data, the instructions recommended at READ.ME are followed.
 For trend analysis, we used pandas, gensim, nltk, and neuroner python libraries. The install requirements are found on install.sh of the github repository.
 
 
-\subsection{Previous approaches}
+\subsection{Previous Approaches}
 Issue trend analysis can be seen as a part of Topic modeling. By searching fields of recent Topic modeling, LDA has shown to have good performance. As a result, LDA is used as a baseline algorithm for trend analysis.
 A recent study(2018) on Topic Modeling shows that Topic Quality improves when Named Entities are promoted.\cite{krasnashchok-jouili-2018-improving} This paper proposes 2 techniques: 1. Independent Named Entity Promoting and 2. Document Dependent Named Entity Promoting. Independent Named Entity Promoting promotes the importance of the named entities by applying scalar multiplication alpha to the importance of the named entity word. Document Dependent Named Entity Promoting promotes the importance of the named entities by setting the weights of the named entities as maximum term-frequency per document. For Independent Named Entity Promoting, the value of alpha can be changed flexibly, but results conducted by this paper shows that setting alpha as 10 showed the best results.
 We take advantage of this paper's idea on Independent Named Entity Promoting and implement Named Entity Promoted Topic Modeling by LDA.
@@ -26,7 +26,7 @@ Third, original relationships between words are lost, because of the removal of 
 For these 3 reasons, we decided to not apply lemmatization for tokenization, because lemmatization lose information about the original text. We decided to just use word\_tokenize from nltk.tokenize, do POS tagging and then do NER.
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[witdh=0.8\linewidth]{trend_overall.png}
+  \includegraphics[width=0.8\linewidth]{trend_overall.png}
   \caption{Overall flow of Trend Analysis process.}
 \end{figure}
 

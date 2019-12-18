@@ -9,7 +9,7 @@ and the set of document of topic $a$ as $\mathbb{T}_{a} \in \mathcal{P}(\mathbb{
     \caption{Overview of off-issue tracking process.}
 \end{figure*}
 
-\subsection{BoW extraction}
+\subsection{BoW Extraction}
 In first, we have to extract document in some space which we can analyze quantatively.
 We use BoW as morphism from document space to vector space $\mathbb{R}^{N}$, which we can
 analyze similarity of document. In addition, we add one more dimension to give information
@@ -24,7 +24,7 @@ our transformation $b: \mathbb{D} \rightarrow \mathbb{R}^{n+1}$ is defined induc
 Then, morphism from $\mathbb{T}_{a} \in \mathcal{P}(\mathbb{D})$ to $\mathcal{P}(\mathbb{R}^{n+1})$ is naturally induced from $b$ as
 $\phi(\mathbb{T}_{a}) = \{b(d) | d \in \mathbb{T}_{a}\}$
 
-\subsection{Relation between semantic of document and BoW}
+\subsection{Relation Between Semantic of Document and BoW}
 We know that there are documents and events which have similar meaning, but we cannot formalize it because we currently do not have
 model of language interpretation in metric space. But we can assume \textit{such} space exists, i.e. there is an isomorphism
 $\phi: \mathbb{D} \rightarrow \mathbb{D}^{\#}$, when $(D^{\#}, d^{\#})$ is metric space. It is not hard to assume this structure,
@@ -38,7 +38,7 @@ We can derive more interesting properties (such as bounded error from BoW to Eve
     $b$ has approximation of $\phi$ with bound $K, \epsilon$ iff there exists an Lipshitz continuous $\pi$ with $K$ that $d^{\#}(\pi(b(d)), \phi(d)) \leq \epsilon$.
 \end{definition}
 
-\subsection{Relation between semantic of event and BoW}
+\subsection{Relation Between Semantic of Event and BoW}
 Once semantic of document is defined, we can build similar notion of event as metric space. To build such space, we first understand about
 relation between document and event.
 \begin{itemize}
@@ -64,7 +64,7 @@ If we have an approximation of semantics with bounded error, then there also exi
 Although proof is directly derived from Lipschitz continuity, it emphasizes that if we have bounded approximation of document, then it guarantees
 bounded approximation of event.
 
-\subsection{Event clustering}
+\subsection{Event Clustering}
 
 In this assumption about semantic of document ans event, we can build event clustering method. Before using techniques in $R^{n+1}$, we
 focus on how this clustering in $R^{n+1}$ effects in $E^{\#}$.
@@ -86,7 +86,7 @@ It shows that, if we make good Vector transformation $b$, then it automatically 
 construction of $\pi$, $\phi$, $e$ or any other. Begin with this fact, we derive constructive definition of partition for documents using approximated
 transformation $b$. To do that, we first define similarity relation for two documents.
 
-\begin{definition}[Similarity relation]
+\begin{definition}[Similarity Relation]
     $\approx_{\mathbb{R}^{n+1}, \delta} \in \mathcal{P}(\mathbb{D \times D})$ is defined as \begin{displaymath}
         d_{1} \approx_{\mathbb{R}^{n+1}, \delta} d_{2} \Longleftrightarrow || b(d_{1}) - b(d_{2}) || \leq \delta.
     \end{displaymath}
@@ -97,7 +97,7 @@ transformation $b$. To do that, we first define similarity relation for two docu
 then $\approx_{\mathbb{R}^{n+1}, \delta} \subseteq \approx_{E^{\#}, 2 \cdot \epsilon + K \cdot \delta}$ holds by above theorem. Thus it is quite
 reasonable to use $\approx_{\mathbb{R}^{n+1}, \delta}$ to cluster events, instead of uncomputable relation $\approx_{E^{\#}, 2 \cdot \epsilon + K \cdot \delta}$.
 
-\begin{definition}[Transitive closure]
+\begin{definition}[Transitive Closure]
     $\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ is smallest relation on $\mathbb{D}$ that contains $\approx_{\mathbb{R}^{n+1}, \delta}$ and is transitive.
 \end{definition}
 
@@ -111,7 +111,7 @@ Then, we can partition documents with this equivalence relation.
 By substitute $\mathbb{D}$ to $\mathbb{T}_{a}$, finally we have $\mathbb{T}_{a}/\approx_{\mathbb{R}^{n+1}, \delta}^{*}$ as successful approximation 
 of event partition of topic $a$. Now, we are going to explain how most relevant description of event is extracted from each partition.
 
-\subsection{Extracting representative description}
+\subsection{Extracting Representative Description}
 
 Now we have cluster of events (documents which describing events) $\mathbb{T}_{a}/\approx_{\mathbb{R}^{n+1}, \delta}^{*}$, but we should
 return summary of events, because whole collection of documents are quite long to read and might have
@@ -141,7 +141,7 @@ It means that we choose to extract event from a document which has
 minimum difference between all other documents. After choosing representative
 document, we use Giveme5W1H framework\cite{Hamborg2019b} to extract description of event.
 
-\subsection{implementation}
+\subsection{Implementation}
 
 To implement BoW transformation and document clustering, we use pandas and gensim for python.
 to calculate transitive closure and finding partition, we use DBSCAN algorithm. Parameters

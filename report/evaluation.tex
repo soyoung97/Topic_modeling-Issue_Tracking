@@ -1,11 +1,11 @@
 \section{Evaluation}
 
-\subsection{Trend analysis evaluation}
+\subsection{Trend Analysis Evaluation}
 To evaluate our result, we first try to show that our trend analysis
 works well. To do that, we collect other document with topic label.
 With these test set, its trend analysis result indirectly shows our
 accuracy of trend analysis.
-\subsection{Selecting test set}
+\subsection{Selecting Test Set}
 We use reuters data set. It consists of more than 9000 documents
 with more than 70 topics. But, the similarity of document is important
 because evaluation on very diffrent set of documents doesn't imply
@@ -22,7 +22,7 @@ represented as graph in figure \ref{fig:distance}. Distance of nearest
 Also, there are significant difference of distances between nearest group and
 others, as shown as table \ref{table:groupdistance}.
 
-\subsection{Reuters evaluation}
+\subsection{Reuters Evaluation}
 With reuters dataset with 10 pre-classified topics, we generate LDA
 model for reuters dataset and make 10 topics. And we classified the topic
 with given label. In result, we successfully classified 7 topics from
@@ -92,7 +92,7 @@ accuracy.
 
 
 
-\subsection{Off-issue tracking}
+\subsection{Off-issue Tracking}
 
 For off-issue tracking, we just evaluated dunn index of clusters for many epsilon values of DBSCAN algorithm.
 If dunn index is high, then it means cluster has higher distance between cluster, and has lower distance in cluster.
