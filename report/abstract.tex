@@ -5,11 +5,13 @@
   so the automatic process held by the machine is needed.
   In this paper, we suggest an automatic news analysis process, which consists three steps:
   \textit{1. trend analysis}, \textit{2. on-issue event tracking}, and \textit{3. off-issue event tracking}.
-  After the experiment, we see that our trend analysis model clusters the news articles by topics
+  For trend analysis, we use LDA with NER promotion, and for on-issue and off-issue tracking,
+ we use DBSCAN and several libraries. 
+ After the experiment, we see that our trend analysis model clusters the news articles by topics
   very well, and event tracking models find out the events for each issue(topic). 
 \end{abstract}
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
-\keywords{topic analysis, event tracking, news}
+\keywords{topic modeling, event tracking, news analysis}
 
